@@ -1,0 +1,37 @@
+add_newline = false
+
+[line_break]
+disabled = true
+
+[username]
+style_user = "#9EA3C0"
+style_root = "black bold"
+format = "[$user]($style) "
+disabled = true
+show_always = true
+
+[hostname]
+ssh_only = false
+format =  "[$hostname](#929BE5) "
+trim_at = ".fritz.box"
+disabled = false
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[➜](#436463) "
+error_symbol = "[✗](red bold) "
+
+[cmd_duration]
+min_time = 60_0000
+
+[kubernetes]
+format = 'on [⛵ $context \($namespace\)](dimmed green) '
+disabled = false
+
+[gcloud]
+disabled = true
+
+[directory]
+style = "#6775c7"
+
+
