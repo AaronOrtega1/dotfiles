@@ -6,4 +6,4 @@
 [diff]
 	tool = meld
 [credential]
-	helper = cache
+	helper = store
