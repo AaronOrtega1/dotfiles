@@ -1,37 +1,96 @@
 add_newline = false
+command_timeout = 1000
+format = """$os $hostname$kubernetes$directory$git_branch $git_status"""
 
-[line_break]
-disabled = true
+# Drop ugly default prompt characters
+[character]
+success_symbol = ''
+error_symbol = ''
 
+#--
+[os]
+format = '[$symbol](bold white)'
+disabled = false
+
+[os.symbols]
+Windows = ' '
+Arch = '󰣇'
+Ubuntu = ''
+Macos = '󰀵'
+
+# ---y
+
+# Shows the username
 [username]
-style_user = "#9EA3C0"
-style_root = "black bold"
-format = "[$user]($style) "
-disabled = true
+style_user = 'white bold'
+style_root = 'black bold'
+format = '[$user]($style) '
+disabled = false
 show_always = true
 
+# Shows the hostname
 [hostname]
 ssh_only = false
-format =  "[$hostname](#929BE5) "
-trim_at = ".fritz.box"
+format = 'on [$hostname](bold yellow) '
 disabled = false
 
-# Replace the "❯" symbol in the prompt with "➜"
-[character]                            # The name of the module we are configuring is "character"
-success_symbol = "[➜](#436463) "
-error_symbol = "[✗](red bold) "
+# Shows current directory
+[directory]
+truncation_length = 1
+truncation_symbol = '../'
+home_symbol = '󰋜 ~'
+read_only_style = '197'
+read_only = '  '
+format = 'at [$path]($style)[$read_only]($read_only_style) '
 
-[cmd_duration]
-min_time = 60_0000
+# Shows current git branch
+[git_branch]
+symbol = ' '
+format = 'via [$symbol$branch]($style)'
+# truncation_length = 4
+truncation_symbol = '…/'
+style = 'bold green'
 
+# Shows current git status
+[git_status]
+format = '[$all_status$ahead_behind]($style) '
+style = 'bold green'
+conflicted = '🏳'
+up_to_date = ''
+untracked = ' '
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+stashed = ' '
+modified = ' '
+staged = '[++\($count\)](green)'
+renamed = '襁 '
+deleted = ' '
+
+# Shows kubernetes context and namespace
 [kubernetes]
-format = 'on [⛵ $context \($namespace\)](dimmed green) '
-disabled = false
-
-[gcloud]
+format = 'via [󱃾 $context\($namespace\)](bold purple) '
 disabled = true
 
-[directory]
-style = "#6775c7"
+# ---
 
+[vagrant]
+disabled = true
 
+[docker_context]
+disabled = true
+
+[helm]
+disabled = true
+
+[python]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[ruby]
+disabled = true
+
+[terraform]
+disabled = true
