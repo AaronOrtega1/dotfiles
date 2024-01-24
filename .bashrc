@@ -118,3 +118,10 @@ fi
 
 # Starship
 eval "$(starship init bash)"
+
+# Alias
+alias py='python3'
+
+# NVM config
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
