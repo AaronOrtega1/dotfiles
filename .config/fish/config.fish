@@ -22,3 +22,6 @@ else
     end
 end
 # <<< conda initialize <<<
+
+### Node.js route to PATH
+set -x PATH $PATH /home/aarondev/.nvm/versions/node/v20.11.0/bin/
