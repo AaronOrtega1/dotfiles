@@ -1,10 +1,10 @@
-add_newline = false
+add_newline = true
 command_timeout = 1000
 #format = """$hostname$os$kubernetes$directory$git_branch $git_status"""
 
 format = """
-[╭─](bold blue) $hostname$os
-[╰─](bold purple) $directory$git_branch$git_status
+[╭─](bold #5AC8FF) $hostname$os$shell$conda
+[╰─](bold #5AC8FF) $directory$git_branch$git_status
 """
 
 # Drop ugly default prompt characters
@@ -14,7 +14,7 @@ error_symbol = ''
 
 #--
 [os]
-format = '[$symbol](bold white)'
+format = '[$symbol](bold #5AC8FF)'
 disabled = false
 
 [os.symbols]
@@ -36,7 +36,7 @@ show_always = true
 # Shows the hostname
 [hostname]
 ssh_only = false
-format = '[$hostname](bold yellow) on '
+format = '[$hostname](bold #905AFF) on '
 disabled = false
 
 # Shows current directory
@@ -46,20 +46,18 @@ truncation_symbol = '../'
 home_symbol = '󰋜 ~'
 read_only_style = '197'
 read_only = '  '
-format = 'at [$path]($style)[$read_only]($read_only_style) '
+format = 'at [$path](bold #5AC8FF)[$read_only](#F1F1F1)($read_only_style) '
 
 # Shows current git branch
 [git_branch]
 symbol = ' '
-format = 'via [$symbol$branch]($style)'
+format = 'via [$symbol$branch](bold #905AFF)'
 # truncation_length = 4
 truncation_symbol = '…/'
-style = 'bold green'
 
 # Shows current git status
 [git_status]
-format = ' [$all_status$ahead_behind]($style) '
-style = 'bold green'
+format = ' [$all_status$ahead_behind](bold #905AFF) '
 conflicted = '🏳'
 up_to_date = ''
 untracked = ' '
@@ -74,6 +72,17 @@ deleted = ' '
 [kubernetes]
 format = 'via [󱃾 $context\($namespace\)](bold purple) '
 disabled = true
+
+# Shows conda environment
+[conda]
+format = '[$symbol$environment](bold #5AC8FF) '
+
+# Shows active shell
+[shell]
+format = "at [$indicator](bold #5AC8FF)"
+fish_indicator = '󰈺 '
+bash_indicator = 'bash '
+disabled = false
 
 # ---
 
