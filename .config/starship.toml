@@ -1,6 +1,11 @@
 add_newline = false
 command_timeout = 1000
-format = """$os $hostname$kubernetes$directory$git_branch $git_status"""
+#format = """$hostname$os$kubernetes$directory$git_branch $git_status"""
+
+format = """
+[╭─](bold blue) $hostname$os
+[╰─](bold purple) $directory$git_branch$git_status
+"""
 
 # Drop ugly default prompt characters
 [character]
@@ -14,9 +19,9 @@ disabled = false
 
 [os.symbols]
 Windows = ' '
-Arch = '󰣇'
-Ubuntu = ''
-Macos = '󰀵'
+Arch = '󰣇 '
+Ubuntu = ' '
+Macos = '󰀵 '
 
 # ---y
 
@@ -31,7 +36,7 @@ show_always = true
 # Shows the hostname
 [hostname]
 ssh_only = false
-format = 'on [$hostname](bold yellow) '
+format = '[$hostname](bold yellow) on '
 disabled = false
 
 # Shows current directory
@@ -53,7 +58,7 @@ style = 'bold green'
 
 # Shows current git status
 [git_status]
-format = '[$all_status$ahead_behind]($style) '
+format = ' [$all_status$ahead_behind]($style) '
 style = 'bold green'
 conflicted = '🏳'
 up_to_date = ''
