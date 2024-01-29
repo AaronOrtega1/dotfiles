@@ -6,6 +6,9 @@ set -g fish_greeting
 
 ### Alias
 alias py='python3'
+alias update='sudo apt update && sudo apt upgrade -y'
+alias personal='cd /home/aarondev/Documents/PersonalProjects'
+alias matrix='cd /home/aarondev/Documents/Matrix'
 
 ### CONDA PATH
 set -x PATH $PATH /home/aarondev/anaconda3/bin/
