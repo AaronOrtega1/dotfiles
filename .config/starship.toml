@@ -1,9 +1,10 @@
+
 add_newline = true
 command_timeout = 1000
 #format = """$hostname$os$kubernetes$directory$git_branch $git_status"""
 
 format = """
-[╭─](bold #5AC8FF) $hostname$os$shell$conda
+[╭─](bold #5AC8FF) $hostname$os$shell$conda$python$nodejs
 [╰─](bold #5AC8FF) $directory$git_branch$git_status
 """
 
@@ -75,34 +76,25 @@ disabled = true
 
 # Shows conda environment
 [conda]
-format = '[$symbol$environment](bold #5AC8FF) '
+format = 'via [$symbol$environment](bold #77DD77) '
 
 # Shows active shell
 [shell]
-format = "at [$indicator](bold #5AC8FF)"
-fish_indicator = '󰈺 '
-bash_indicator = 'bash '
+format = "[$indicator](bold #5AC8FF)"
+fish_indicator = '󰈺'
+bash_indicator = 'bash'
 disabled = false
 
 # ---
 
-[vagrant]
-disabled = true
-
 [docker_context]
 disabled = true
 
-[helm]
-disabled = true
-
 [python]
-disabled = true
+disabled = false
+format = ' via [🐍 $version](bold #77DD77) '
 
 [nodejs]
-disabled = true
+disabled = false
+format = ' via [🤖 $version](bold #6495ed) '
 
-[ruby]
-disabled = true
-
-[terraform]
-disabled = true
