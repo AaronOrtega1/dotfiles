@@ -26,12 +26,12 @@ disabled = true
 show_always = true
 style_user = "fg:#CAA9E0 bg:#2C2B3C"
 style_root = "fg:#CAA9E0 bg:#2C2B3C"
-format = '[ ]($style)' # $user
+format = '[ $user]($style)' # $user
 
 [directory]
 style = "fg:#91B1F0 bg:#313041"
 format = "[ $path ]($style)"
-truncation_length = 3
+truncation_length = 2
 truncation_symbol = "…/"
 
 # Here is how you can shorten some long paths by text replacement
@@ -56,10 +56,22 @@ format = '[ $symbol $branch(:$remote_branch) ]($style)'
 
 [git_status]
 style = "fg:#a6e3a1 bg:#353446"
-ahead = "⇡${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-behind = "⇣${count}"
-deleted = "x"
+# ahead = "⇡${count}"
+#diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+#behind = "⇣${count}"
+#modified = ' '
+#truncation_length = 2
+#untracked = ' '
+#modified = ' '
+conflicted = '🏳'
+up_to_date = ''
+untracked = ' '
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+stashed = ' '
+modified = ' '
+renamed = '襁 '
+deleted = ' '
 format = '[$all_status$ahead_behind ]($style)'
 
 
