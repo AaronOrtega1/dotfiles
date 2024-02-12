@@ -14,6 +14,27 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
+    {
+      "nvim-neorg/neorg",
+      build = ":Neorg sync-parsers",
+      -- tag = "*",
+      dependencies = { "nvim-lua/plenary.nvim" },
+      config = function()
+        require("neorg").setup {
+          load = {
+            ["core.defaults"] = {}, -- Loads default behaviour
+            ["core.concealer"] = {}, -- Adds pretty icons to your documents
+            ["core.dirman"] = { -- Manages Neorg workspaces
+              config = {
+                workspaces = {
+                  notes = "~/notes",
+                },
+              },
+            },
+          },
+        }
+      end,
+    },
     -- import/override with your plugins
     { import = "plugins" },
   },
