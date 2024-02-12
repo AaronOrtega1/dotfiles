@@ -35,6 +35,12 @@ require("lazy").setup({
         }
       end,
     },
+    {
+      "zbirenbaum/copilot-cmp",
+      config = function ()
+        require("copilot_cmp").setup()
+      end
+    },    
     -- import/override with your plugins
     { import = "plugins" },
   },
