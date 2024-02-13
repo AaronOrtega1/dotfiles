@@ -169,7 +169,7 @@ colors = init_colors()
 
 def init_layout_theme():
     return {
-        "margin": 10,
+        "margin": 6,
         "border_width": 2,
         "border_focus": colors[5],
         "border_normal": colors[9],
