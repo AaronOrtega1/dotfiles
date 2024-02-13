@@ -57,28 +57,18 @@ keys = [
     # will be to screen edge - window would shrink.
     Key(
         [mod, "control"],
-        "h",
-        lazy.layout.grow_right(),
+        "Left",
+        lazy.layout.grow_left(),
         desc="Grow window to the left",
     ),
     Key(
         [mod, "control"],
-        "l",
-        lazy.layout.grow_left(),
+        "Right",
+        lazy.layout.grow_right(),
         desc="Grow window to the right",
     ),
-    Key(
-        [mod, "control"],
-        "j",
-        lazy.layout.grow_down(),
-        desc="Grow window down",
-    ),
-    Key(
-        [mod, "control"],
-        "k",
-        lazy.layout.decrease_nmaster(),
-        desc="Grow window up",
-    ),
+    Key([mod, "control"], "Down", lazy.layout.grow_down(), desc="Grow window down"),
+    Key([mod, "control"], "Up", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
@@ -156,6 +146,7 @@ for i, name in enumerate(group_names, 1):
 ## Layouts ----------------------------------
 
 
+# TODO: Change color scheme to go with tokyonight
 def init_colors():
     return [
         ["#2E3440", "#2E3440"],  # color 0 Background
@@ -168,7 +159,7 @@ def init_colors():
         ["#cda5ff", "#cda5ff"],  # color 7 -
         ["#dbbeff", "#dbbeff"],  # color 8 -
         ["#e9d8ff", "#e9d8ff"],
-    ]  # color 9 -
+    ]  # color 8 -
 
 
 tokyo = colors["night"]
@@ -188,9 +179,14 @@ def init_layout_theme():
 layout_theme = init_layout_theme()
 
 layouts = [
-    layout.MonadTall(**layout_theme),
+    layout.Columns(**layout_theme),
     layout.Max(**layout_theme),
-    layout.Tile(**layout_theme),
+    # layout.MonadTall(**layout_theme),
+    # layout.Tile(**layout_theme),
+    # layout.Floating(**layout_theme),
+    # layout.MonadWide(**layout_theme),
+    # layout.RatioTile(**layout_theme),
+    # layout.Bsp(**layout_theme),
 ]
 
 
