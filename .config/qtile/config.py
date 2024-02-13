@@ -1,14 +1,10 @@
 ## Import Libraries and Theme ----------------------------------
 
 import os
-import re
-import socket
 import subprocess
-from typing import List
 from libqtile import bar, layout, qtile, widget, hook
-from libqtile.config import Click, Drag, Group, Key, Match, Screen, Rule
+from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-from libqtile.widget.textbox import TextBox
 from themes.tokyonight import colors
 
 ## Startup ----------------------------------
@@ -34,6 +30,7 @@ keys = [
     Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Launch Menu"),
     Key([mod], "w", lazy.spawn(browser), desc="Launch Browser"),
     Key([mod], "e", lazy.spawn(file_manager), desc="Launch Browser"),
+    Key([mod], "p", lazy.spawn("sh -c ~/.config/rofi/scripts/power"), desc="powermenu"),
     # Switch between windows
     Key([mod], "Left", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "Right", lazy.layout.right(), desc="Move focus to right"),
@@ -60,25 +57,25 @@ keys = [
     # will be to screen edge - window would shrink.
     Key(
         [mod, "control"],
-        "Right",
+        "h",
         lazy.layout.grow_right(),
         desc="Grow window to the left",
     ),
     Key(
         [mod, "control"],
-        "Left",
+        "l",
         lazy.layout.grow_left(),
         desc="Grow window to the right",
     ),
     Key(
         [mod, "control"],
-        "Down",
+        "j",
         lazy.layout.grow_down(),
         desc="Grow window down",
     ),
     Key(
         [mod, "control"],
-        "Up",
+        "k",
         lazy.layout.decrease_nmaster(),
         desc="Grow window up",
     ),
@@ -209,6 +206,11 @@ def init_widgets_defaults():
 
 widget_defaults = init_widgets_defaults()
 extension_defaults = widget_defaults.copy()
+
+
+def power():
+    qtile.cmd_spawn("sh -c ~/.config/rofi/scripts/power")
+
 
 ## Screens ----------------------------------
 

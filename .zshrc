@@ -103,6 +103,8 @@ alias Matrix="cd ~/Documents/Matrix/"
 alias Notes="cd ~/Documents/Notes/"
 alias Conf="cd ~/.config/"
 alias Dotfiles="cd ~/Documents/dotfiles/"
+alias dots="cp -r ~/.config/nvim/ ~/.config/qtile/ ~/.config/picom/ ~/.config/neofetch/ ~/.config/alacritty/ ~/.config/starship.toml ~/.config/rofi/ ~/Documents/dotfiles/.config/"
+alias Personal="cd ~/Documents/PersonalProjects/"
 
 # prompt
 eval "$(starship init zsh)"
