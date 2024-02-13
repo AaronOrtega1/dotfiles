@@ -43,6 +43,7 @@ truncation_symbol = "…/"
 "Music" = "🎜 "
 "Pictures" = " "
 "Videos" = " "
+"Notes" = "󰠮"
 # Keep in mind that the order matters. For example:
 # "Important Documents" = "  "
 # will not be replaced, because "Documents" was already substituted before.
@@ -146,7 +147,7 @@ style = "fg:#cba6f7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [nodejs]
-symbol = ""
+symbol = "󰎙"
 style = "fg:#cba6f7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 

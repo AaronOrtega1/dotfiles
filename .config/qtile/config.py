@@ -1,5 +1,3 @@
-
-
 ## Import Libraries and Theme ----------------------------------
 
 import os
@@ -15,66 +13,33 @@ from themes.tokyonight import colors
 
 ## Startup ----------------------------------
 
+
 @hook.subscribe.startup_once
 def start_once():
-    home = os.path.expanduser('~')
-    subprocess.call([home + '/.config/qtile/autostart.sh'])
+    home = os.path.expanduser("~")
+    subprocess.call([home + "/.config/qtile/autostart.sh"])
+
 
 ## Key Bindings ----------------------------------
 
 mod = "mod4"
 terminal = "alacritty"
 browser = "brave"
-file_manager = 'thunar'
+file_manager = "thunar"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
-
     # Custom
-    Key(
-        [mod], "r", 
-        lazy.spawn("rofi -show drun"), 
-        desc="Launch Menu"
-    ),
-    Key(
-        [mod], "w", 
-        lazy.spawn(browser), 
-        desc="Launch Browser"
-    ),
-    Key(
-        [mod], "e", 
-        lazy.spawn(file_manager), 
-        desc="Launch Browser"
-    ),
-
-    # Switch between windows 
-    Key(
-        [mod], "Left", 
-        lazy.layout.left(), 
-        desc="Move focus to left"
-    ),
-    Key(
-        [mod], "Right", 
-        lazy.layout.right(), 
-        desc="Move focus to right"
-    ),
-    Key(
-        [mod], "Down", 
-        lazy.layout.down(), 
-        desc="Move focus down"
-    ),
-    Key(
-        [mod], "Up", 
-        lazy.layout.up(), 
-        desc="Move focus up"
-    ),
-    Key(
-        [mod], "space", 
-        lazy.layout.next(), 
-        desc="Move window focus to other window"
-    ),
-
+    Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Launch Menu"),
+    Key([mod], "w", lazy.spawn(browser), desc="Launch Browser"),
+    Key([mod], "e", lazy.spawn(file_manager), desc="Launch Browser"),
+    # Switch between windows
+    Key([mod], "Left", lazy.layout.left(), desc="Move focus to left"),
+    Key([mod], "Right", lazy.layout.right(), desc="Move focus to right"),
+    Key([mod], "Down", lazy.layout.down(), desc="Move focus down"),
+    Key([mod], "Up", lazy.layout.up(), desc="Move focus up"),
+    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key(
@@ -89,28 +54,19 @@ keys = [
         lazy.layout.shuffle_right(),
         desc="Move window to the right",
     ),
-    Key(
-        [mod, "shift"], "Down", 
-        lazy.layout.shuffle_down(), 
-        desc="Move window down"
-    ),
-    Key([
-        mod, "shift"], "Up", 
-        lazy.layout.shuffle_up(), 
-        desc="Move window up"
-    ),
-
+    Key([mod, "shift"], "Down", lazy.layout.shuffle_down(), desc="Move window down"),
+    Key([mod, "shift"], "Up", lazy.layout.shuffle_up(), desc="Move window up"),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
     Key(
         [mod, "control"],
-        "Left",
+        "Right",
         lazy.layout.grow_right(),
         desc="Grow window to the left",
     ),
     Key(
         [mod, "control"],
-        "Right",
+        "Left",
         lazy.layout.grow_left(),
         desc="Grow window to the right",
     ),
@@ -126,12 +82,7 @@ keys = [
         lazy.layout.decrease_nmaster(),
         desc="Grow window up",
     ),
-    Key(
-        [mod], "n", 
-        lazy.layout.normalize(), 
-        desc="Reset all window sizes"
-    ),
-
+    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
@@ -142,23 +93,10 @@ keys = [
         lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack",
     ),
-    Key(
-        [mod], "Return", 
-        lazy.spawn(terminal), 
-        desc="Launch terminal"
-    ),
-
+    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below
-    Key(
-        [mod], "Tab", 
-        lazy.next_layout(), 
-        desc="Toggle between layouts"
-    ),
-    Key(
-        [mod], "q", 
-        lazy.window.kill(), 
-        desc="Kill focused window"
-    ),
+    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key(
         [mod],
         "f",
@@ -199,41 +137,56 @@ groups = [Group(name) for name in group_names]
 
 # Configure the keyboard shortcuts to change groups
 for i, name in enumerate(group_names, 1):
-    keys.extend([
-        # mod + num of group = change group
-        Key([mod], str(i), lazy.group[name].toscreen(),
-            desc=f"Switch to group {name}"),
-        # mod + shift + num of group = change and move focus window to group
-        Key([mod, "shift"], str(i),
-            lazy.window.togroup(name, switch_group=True),
-            desc=f"Switch to & move focused window to group {name}")
-    ])
+    keys.extend(
+        [
+            # mod + num of group = change group
+            Key(
+                [mod],
+                str(i),
+                lazy.group[name].toscreen(),
+                desc=f"Switch to group {name}",
+            ),
+            # mod + shift + num of group = change and move focus window to group
+            Key(
+                [mod, "shift"],
+                str(i),
+                lazy.window.togroup(name, switch_group=True),
+                desc=f"Switch to & move focused window to group {name}",
+            ),
+        ]
+    )
 
 ## Layouts ----------------------------------
 
+
 def init_colors():
-    return [["#2E3440", "#2E3440"], # color 0 Background
-            ["#37306B", "#37306B"], # color 1 
-            ["#66347F", "#66347F"], # color 2
-            ["#9E4784", "#9E4784"], # color 3
-            ["#D27685", "#D27685"], # color 4
-            ["#b172ff", "#b172ff"], # color 5 - purple-dark
-            ["#bf8bff", "#bf8bff"], # color 6 - ...
-            ["#cda5ff", "#cda5ff"], # color 7 -
-            ["#dbbeff", "#dbbeff"], # color 8 - 
-            ["#e9d8ff", "#e9d8ff"]] # color 9 -
+    return [
+        ["#2E3440", "#2E3440"],  # color 0 Background
+        ["#37306B", "#37306B"],  # color 1
+        ["#66347F", "#66347F"],  # color 2
+        ["#9E4784", "#9E4784"],  # color 3
+        ["#D27685", "#D27685"],  # color 4
+        ["#b172ff", "#b172ff"],  # color 5 - purple-dark
+        ["#bf8bff", "#bf8bff"],  # color 6 - ...
+        ["#cda5ff", "#cda5ff"],  # color 7 -
+        ["#dbbeff", "#dbbeff"],  # color 8 -
+        ["#e9d8ff", "#e9d8ff"],
+    ]  # color 9 -
+
 
 tokyo = colors["night"]
 
 colors = init_colors()
 
+
 def init_layout_theme():
     return {
-        "margin":10,
-        "border_width":2,
+        "margin": 10,
+        "border_width": 2,
         "border_focus": colors[5],
         "border_normal": colors[9],
     }
+
 
 layout_theme = init_layout_theme()
 
@@ -243,15 +196,16 @@ layouts = [
     layout.Tile(**layout_theme),
 ]
 
+
 def init_widgets_defaults():
     return dict(
         font="JetBrainsMono Nerd Font Regular",
         fontsize=12,
         padding=10,
-        foreground = tokyo["fg"],
-        background = tokyo["bg"],
-
+        foreground=tokyo["fg"],
+        background=tokyo["bg"],
     )
+
 
 widget_defaults = init_widgets_defaults()
 extension_defaults = widget_defaults.copy()
@@ -263,21 +217,21 @@ screens = [
         top=bar.Bar(
             [
                 widget.GroupBox(
-                    margin_y = 3,
-                    margin_x = 0,
-                    padding_y = 6,
-                    padding_x = 6,
-                    borderwidth = 0,
-                    disable_drag = True,    
-                    active = colors[5],
-                    inactive = 'ffffff',
-                    rounded = False,
-                    highlight_color = colors[7],
-                    highlight_method = "line",
+                    margin_y=3,
+                    margin_x=0,
+                    padding_y=6,
+                    padding_x=6,
+                    borderwidth=0,
+                    disable_drag=True,
+                    active=colors[5],
+                    inactive="ffffff",
+                    rounded=False,
+                    highlight_color=colors[7],
+                    highlight_method="line",
                 ),
                 widget.CurrentLayout(),
                 widget.Prompt(),
-                widget.Spacer(len = bar.STRETCH),
+                widget.Spacer(len=bar.STRETCH),
                 widget.Chord(
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),
@@ -354,8 +308,3 @@ wl_input_rules = None
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
-
-# @hook.subscribe.startup_once
-# def autostart():
-#     home = os.path.expanduser('~/.config/qtile/autostart.sh')
-#     subprocess.call([home])

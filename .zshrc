@@ -99,6 +99,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias Matrix="cd ~/Documents/Matrix/"
+alias Notes="cd ~/Documents/Notes/"
+alias Conf="cd ~/.config/"
+alias Dotfiles="cd ~/Documents/dotfiles/"
 
 # prompt
 eval "$(starship init zsh)"
@@ -117,4 +121,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
