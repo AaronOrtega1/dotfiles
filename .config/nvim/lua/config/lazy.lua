@@ -19,27 +19,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
     { import = "lazyvim.plugins.extras.ui.alpha" },
     {
-      "nvim-neorg/neorg",
-      build = ":Neorg sync-parsers",
-      -- tag = "*",
-      dependencies = { "nvim-lua/plenary.nvim" },
-      config = function()
-        require("neorg").setup {
-          load = {
-            ["core.defaults"] = {},  -- Loads default behaviour
-            ["core.concealer"] = {}, -- Adds pretty icons to your documents
-            ["core.dirman"] = {      -- Manages Neorg workspaces
-              config = {
-                workspaces = {
-                  notes = "~/notes",
-                },
-              },
-            },
-          },
-        }
-      end,
-    },
-    {
       "zbirenbaum/copilot-cmp",
       config = function()
         require("copilot_cmp").setup()
