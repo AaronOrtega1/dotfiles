@@ -31,6 +31,9 @@ keys = [
     Key([mod], "w", lazy.spawn(browser), desc="Launch Browser"),
     Key([mod], "e", lazy.spawn(file_manager), desc="Launch Browser"),
     Key([mod], "p", lazy.spawn("sh -c ~/.config/rofi/scripts/power"), desc="powermenu"),
+    # Switch focus of monitors
+    Key([mod], "period", lazy.next_screen()),
+    Key([mod], "comma", lazy.prev_screen()),
     # Switch between windows
     Key([mod], "Left", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "Right", lazy.layout.right(), desc="Move focus to right"),
@@ -171,8 +174,8 @@ def init_layout_theme():
     return {
         "margin": 6,
         "border_width": 2,
-        "border_focus": colors[5],
-        "border_normal": colors[9],
+        "border_focus": tokyo["magenta"],
+        "border_normal": tokyo["black"],
     }
 
 
@@ -181,8 +184,8 @@ layout_theme = init_layout_theme()
 layouts = [
     layout.Columns(**layout_theme),
     layout.Max(**layout_theme),
-    # layout.MonadTall(**layout_theme),
     # layout.Tile(**layout_theme),
+    # layout.MonadTall(**layout_theme),
     # layout.Floating(**layout_theme),
     # layout.MonadWide(**layout_theme),
     # layout.RatioTile(**layout_theme),
@@ -194,7 +197,7 @@ def init_widgets_defaults():
     return dict(
         font="JetBrainsMono Nerd Font Regular",
         fontsize=12,
-        padding=10,
+        padding=5,
         foreground=tokyo["fg"],
         background=tokyo["bg"],
     )
@@ -221,11 +224,17 @@ screens = [
                     padding_x=6,
                     borderwidth=0,
                     disable_drag=True,
-                    active=colors[5],
-                    inactive="ffffff",
+                    active=tokyo["magenta"],
+                    inactive=tokyo["fg"],
                     rounded=False,
-                    highlight_color=colors[7],
-                    highlight_method="line",
+                    highlight_color=tokyo["red"],
+                    this_current_screen_border=tokyo["magenta"],
+                    this_screen_border=tokyo["magenta"],
+                    other_current_screen_border=tokyo["bg"],
+                    other_screen_border=tokyo["bg"],
+                    urgent_border=tokyo["red"],
+                    urgent_text=tokyo["red"],
+                    highlight_method="text",
                 ),
                 widget.CurrentLayout(),
                 widget.Prompt(),
@@ -239,6 +248,10 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
+                widget.TextBox(
+                    text="",
+                    foreground=tokyo["red"],
+                ),
                 widget.Clock(format="%d-%m-%Y - %R %p"),
                 # widget.QuickExit(),
             ],
