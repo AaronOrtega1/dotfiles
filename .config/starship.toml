@@ -198,6 +198,7 @@ disabled = true
 symbol = "華"
 style = "fg:#f9e2af bg:#333a56"
 format = "[ $symbol]($style)"
+disabled = true
 
 [battery]
 full_symbol = " "

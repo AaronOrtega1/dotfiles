@@ -1,6 +1,7 @@
 import = [
 	"~/.config/alacritty/keybindings/keybindings.toml"
 ]
+# comentario prueba
 
 # Bright colors
 [colors.bright]

@@ -19,7 +19,7 @@ def start_once():
 ## Key Bindings ----------------------------------
 
 mod = "mod4"
-terminal = "alacritty"
+terminal = "kitty"
 browser = "firefox"
 file_manager = "thunar"
 
