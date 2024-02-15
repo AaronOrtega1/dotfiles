@@ -72,19 +72,19 @@ args = []
 size = 12
 
 [font.bold]
-family = "JetBrains Mono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Bold"
 
-[font.glyph_offset]
-y = 0
-
 [font.italic]
-family = "JetBrains Mono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "JetBrains Mono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
+
+[font.glyph_offset]
+y = 0
 
 [font.offset]
 y = 0
