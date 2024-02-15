@@ -20,7 +20,7 @@ def start_once():
 
 mod = "mod4"
 terminal = "alacritty"
-browser = "brave"
+browser = "firefox"
 file_manager = "thunar"
 
 keys = [
