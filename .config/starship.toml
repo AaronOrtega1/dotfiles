@@ -31,7 +31,7 @@ format = '[ $user]($style)' # $user
 [directory]
 style = "fg:#91B1F0 bg:#313041"
 format = "[ $path ]($style)"
-truncation_length = 1
+truncation_length = 3
 truncation_symbol = "…/"
 
 # Here is how you can shorten some long paths by text replacement
