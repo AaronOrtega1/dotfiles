@@ -24,14 +24,14 @@ disabled = true
 # You can also replace your username with a neat symbol like  to save some space
 [username]
 show_always = true
-style_user = "fg:#CAA9E0 bg:#2C2B3C"
-style_root = "fg:#CAA9E0 bg:#2C2B3C"
+style_user = "fg:#9C2DFF bg:#2C2B3C"
+style_root = "fg:#9C2DFF bg:#2C2B3C"
 format = '[ $user]($style)' # $user
 
 [directory]
-style = "fg:#91B1F0 bg:#313041"
+style = "fg:#AB48FF bg:#313041"
 format = "[ $path ]($style)"
-truncation_length = 3
+truncation_length = 2
 truncation_symbol = "…/"
 
 # Here is how you can shorten some long paths by text replacement
@@ -52,11 +52,13 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "fg:#a6e3a1 bg:#353446"
+# style = "fg:#45478D bg:#353446"
+style = "fg:#BA63FF bg:#353446"
 format = '[ $symbol $branch(:$remote_branch) ]($style)'
 
 [git_status]
-style = "fg:#a6e3a1 bg:#353446"
+# style = "fg:#45478D bg:#353446"
+style = "fg:#BA63FF bg:#353446"
 # ahead = "⇡${count}"
 #diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 #behind = "⇣${count}"
@@ -78,112 +80,112 @@ format = '[$all_status$ahead_behind ]($style)'
 
 [aws]
 symbol = " "
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [conda]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [dart]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [c]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [docker_context]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol $context]($style) $path '
 
 [elixir]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [elm]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [golang]
 symbol = "ﳑ"
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [haskell]
 symbol = "λ"
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [java]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [julia]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [lua]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [nim]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [nix_shell]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [nodejs]
 symbol = "󰎙"
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [perl]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [php]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [python]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [ruby]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [rust]
 symbol = "🦀"
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [swift]
 symbol = "ﯣ"
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = '[ $symbol ($version )]($style)'
 
 [package]
 symbol = ""
-style = "fg:#cba6f7 bg:#3E3D4F"
+style = "fg:#C97EFF bg:#3E3D4F" 
 format = "[ $symbol $version]($style)"
 disabled = true
 
