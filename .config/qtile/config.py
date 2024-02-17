@@ -20,7 +20,7 @@ def start_once():
 
 mod = "mod4"
 terminal = "kitty"
-browser = "firefox"
+browser = "firefox-developer-edition"
 file_manager = "thunar"
 
 keys = [
@@ -186,7 +186,7 @@ layouts = [
     layout.Max(**layout_theme),
     # layout.Tile(**layout_theme),
     # layout.MonadTall(**layout_theme),
-    # layout.Floating(**layout_theme),
+    layout.Floating(**layout_theme),
     # layout.MonadWide(**layout_theme),
     # layout.RatioTile(**layout_theme),
     # layout.Bsp(**layout_theme),
