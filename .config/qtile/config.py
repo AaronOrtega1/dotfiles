@@ -250,7 +250,7 @@ screens = [
                 widget.Systray(),
                 widget.TextBox(
                     text="",
-                    foreground=tokyo["red"],
+                    foreground="#9C2DFF",
                 ),
                 widget.Clock(format="%d-%m-%Y - %R %p"),
                 # widget.QuickExit(),

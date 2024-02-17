@@ -41,7 +41,7 @@ colors = {
         "surface0": ["#414559"],
         "base": ["#303446"],
         "mantle": ["#292c3c"],
-        "crust": ["#232634"]
+        "crust": ["#232634"],
     },
     "moon": {
         "rosewater": ["#f4dbd6"],
@@ -69,7 +69,7 @@ colors = {
         "surface0": ["#363a4f"],
         "base": ["#24273a"],
         "mantle": ["#1e2030"],
-        "crust": ["#181926"]
+        "crust": ["#181926"],
     },
     "mocha": {
         "rosewater": ["#f5e0dc"],
@@ -97,7 +97,9 @@ colors = {
         "surface0": ["#313244"],
         "base": ["#1e1e2e"],
         "mantle": ["#181825"],
-        "crust": ["#11111b"]
-    }
+        "crust": ["#11111b"],
+    },
+    "purpleOwn": {
+        "color0": ["#45478D"],
+    },
 }
-
