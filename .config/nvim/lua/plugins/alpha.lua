@@ -9,7 +9,7 @@ return {
   ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
   ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
 
-                 [  - AaronOrtega1 ]
+[ TIP: To exit Neovim, just power off your computer. ]
     ]]
     opts.section.header.val = vim.split(logo, "\n", { trimempty = true })
     -- return opts

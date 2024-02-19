@@ -103,8 +103,23 @@ alias Matrix="cd ~/Documents/Matrix/"
 alias Notes="cd ~/Documents/Notes/"
 alias Conf="cd ~/.config/"
 alias Dotfiles="cd ~/Documents/dotfiles/"
-alias dots="cp -r ~/.config/nvim/ ~/.config/qtile/ ~/.config/picom/ ~/.config/neofetch/ ~/.config/alacritty/ ~/.config/starship.toml ~/.config/nitrogen/ ~/.config/rofi/ ~/Documents/dotfiles/.config/"
+
+alias dots="sudo cp -r 
+            ~/.config/nvim/
+            ~/.config/alacritty/
+            ~/.config/qtile/
+            ~/.config/picom/
+            ~/.config/neofetch/
+            ~/.config/starship.toml
+            ~/.config/rofi/
+            ~/.config/kitty/
+            ~/.config/spicetify/
+
+            ~/Documents/dotfiles/.config/"
+
 alias Personal="cd ~/Documents/PersonalProjects/"
+alias neofetch="neofetch --size none"
+alias code='~/VSCode-linux-x64/code . >/dev/null 2>&1 & disown'
 
 # prompt
 eval "$(starship init zsh)"
@@ -123,3 +138,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
