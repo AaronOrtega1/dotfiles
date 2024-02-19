@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias Matrix="cd ~/Documents/Matrix/"
+alias Matrix="cd ~/Documents/Code/Matrix/"
 alias Notes="cd ~/Documents/Notes/"
 alias Conf="cd ~/.config/"
 alias Dotfiles="cd ~/Documents/dotfiles/"
@@ -117,7 +117,7 @@ alias dots="sudo cp -r
 
             ~/Documents/dotfiles/.config/"
 
-alias Personal="cd ~/Documents/PersonalProjects/"
+alias Personal="cd ~/Documents/Code/PersonalProjects/"
 alias neofetch="neofetch --size none"
 alias code='~/VSCode-linux-x64/code . >/dev/null 2>&1 & disown'
 
