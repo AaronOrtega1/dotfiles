@@ -1,17 +1,16 @@
-
 * {
   /* Default background color */
-  background-color: #1a1b26;
-  text-color:       #c0caf5;
+  background-color: #282738;
+  text-color:       #AB48FF;
   font: "JetBrainsMono Bold 10";
 }
 
 window {
   padding: 1em;
-  border-color: #1a1b26;
+  border-color: #282738;
   border: 5px;
   border-radius: 10px;
-  background-color: #1a1b26;
+  background-color: #282738;
 }
 
 mainbox {
@@ -29,7 +28,7 @@ message {
   background-color:   inherit;
   text-color:         inherit;
   size:               400em;
-  background-color:   #1a1b26; /* Cambio de color */
+  background-color:   #282738; /* Cambio de color */
 }
 
 textbox {
@@ -65,18 +64,18 @@ element,element-text,element-icon, button {
 inputbar {
   margin:            0px 10px;
   spacing:           0.4em;
-  border-color:      #1a1b26;
+  border-color:      #282738;
   border:            5px;
-  background-color:  #1a1b26;
+  background-color:  #282738;
   children:          [entry,overlay,case-indicator];
 }
 
 listview, message {
   padding:           0.5em;
-  border-color:      #1a1b26;
+  border-color:      #282738;
   border:            5px;
   border-radius:     10px;
-  background-color:  #1a1b26;
+  background-color:  #282738;
   columns:           1;
   lines:             8;
 }
@@ -85,8 +84,8 @@ listview {
   border:            0px 5px 5px 5px;
   border-radius:     10px 10px 10px 10px;
   spacing:           10px;
-  background-color:  #1a1b26;
-  border-color:      #1a1b26;
+  background-color:  #282738;
+  border-color:      #282738;
   scrollbar:         true;
 }
 
@@ -94,88 +93,88 @@ element {
   border:             5px;
   border-radius:      5px;
   padding:            5px;
-  border-color:       #1a1b26;
+  border-color:       #282738;
 }
 
 element-text {
-  background-color:   #1a1b26;
-  text-color:         #c0caf5;
+  background-color:   #282738;
+  text-color:         #AB48FF;
   font: "JetBrains Mono Medium";
 }
 
 element normal.normal {
-  background-color:   #1a1b26;
-  text-color:         #c0caf5;
+  background-color:   #282738;
+  text-color:         #AB48FF;
 }
 
 element.normal.urgent {
-  background-color:   #1a1b26;
-  text-color:         #c0caf5;
+  background-color:   #282738;
+  text-color:         #AB48FF;
 }
 
 element.normal.active {
-  background-color:   #1a1b26;
-  text-color:         #c0caf5;
+  background-color:   #282738;
+  text-color:         #AB48FF;
 }
 
 element.selected.normal {
-  background-color:   #c0caf5;
-  border-color:       #c0caf5;
-  text-color:         #c0caf5;
+  background-color:   #AB48FF;
+  border-color:       #AB48FF;
+  text-color:         #AB48FF;
 }
 
 element.selected.urgent {
-  background-color:   #c0caf5;
-  border-color:       #c0caf5;
-  text-color:         #c0caf5;
+  background-color:   #AB48FF;
+  border-color:       #AB48FF;
+  text-color:         #AB48FF;
 }
 
 element.selected.active {
-  background-color:   #c0caf5;
-  border-color:       #c0caf5;
-  text-color:         #c0caf5;
+  background-color:   #AB48FF;
+  border-color:       #AB48FF;
+  text-color:         #AB48FF;
 }
 
 element.alternate.normal {
-  background-color:   #1a1b26;
-  text-color:         #c0caf5;
+  background-color:   #282738;
+  text-color:         #AB48FF;
 }
 
 element.alternate.urgent {
-  background-color:   #1a1b26;
-  text-color:         #c0caf5;
+  background-color:   #282738;
+  text-color:         #AB48FF;
 }
 
 element.alternate.active {
-  background-color:   #1a1b26;
-  text-color:         #c0caf5;
+  background-color:   #282738;
+  text-color:         #AB48FF;
 }
 
 element-text.selected.normal {
-  background-color:   #c0caf5;
-  border-color:       #c0caf5;
-  text-color:         #1a1b26;
+  background-color:   #AB48FF;
+  border-color:       #AB48FF;
+  text-color:         #282738;
   font: "JetBrains Mono Medium";
 }
 
 element-text.selected.urgent {
-  background-color:   #c0caf5;
-  border-color:       #c0caf5;
-  text-color:         #1a1b26;
+  background-color:   #AB48FF;
+  border-color:       #AB48FF;
+  text-color:         #282738;
   font: "JetBrains Mono Medium";
 }
 
 element-text.selected.active {
-  background-color:   #c0caf5;
-  border-color:       #c0caf5;
-  text-color:         #1a1b26;
+  background-color:   #AB48FF;
+  border-color:       #AB48FF;
+  text-color:         #282738;
   font: "JetBrains Mono Medium";
 }
 
 scrollbar {
   width:             4px ;
   border:            0;
-  handle-color:      #c0caf5;
+  handle-color:      #AB48FF;
   handle-width:      8px ;
   padding:           0;
 }
@@ -187,30 +186,30 @@ mode-switcher {
 }
 
 button {
-  text-color:        #c0caf5;
+  text-color:        #AB48FF;
   border:            0px 0px 5px ;
-  border-color:      #1a1b26;
+  border-color:      #282738;
   border-radius:     10px 10px 0 0;
-  background-color:  #1a1b26;
+  background-color:  #282738;
   horizontal-align:  0.5;
 }
 
 button selected.normal {
-  text-color:        #c0caf5;
+  text-color:        #AB48FF;
   margin:            0px;
   padding:           0px;
   border:            5px 5px 5px 5px ;
-  border-color:      #1a1b26;
+  border-color:      #282738;
   border-radius:     10px 10px 10px 10px;
   background-color:  #353446;
 }
 
 entry {
   placeholder:       "Search here";
-  placeholder-color: #1a1b26;
+  placeholder-color: #282738;
   border-color:      #353446;
   background-color:  #353446;
   border:            10px;
   border-radius:     2px 2px 2px 2px;
-  text-color:        #c0caf5;
+  text-color:        #AB48FF;
 }
