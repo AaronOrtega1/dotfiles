@@ -5,15 +5,13 @@ return {
   --   lazy = false,
   --   priority = 1000,
   --   opts = {
+  --     style = "night",
   --     transparent = true,
   --     styles = {
   --       sidebars = "transparent",
   --       floats = "transparent",
   --     },
   --   },
-  --   config = function()
-  --     vim.cmd([[colorscheme tokyonight-night]])
-  --   end,
   -- },
 
   -- CATPPUCCIN CONFIG
@@ -26,11 +24,21 @@ return {
       transparent_background = true,
     },
   },
+  -- ANDROMEDA
+  -- {
+  --   "sainnhe/sonokai",
+  --   priority = 1000,
+  --   config = function()
+  --     vim.g.sonokai_transparent_background = "1"
+  --     vim.g.sonokai_enable_italic = "1"
+  --     vim.g.sonokai_style = "andromeda"
+  --     vim.cmd.colorscheme("sonokai")
+  --   end,
+  -- },
   {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin",
     },
   },
-
 }
