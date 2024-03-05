@@ -78,6 +78,11 @@ style = "fg:#BA63FF bg:#353446"
 merge = ''
 format = '[$merge] ($style)'
 
+[hostname]
+ssh_symbol = " 🌐"
+style = "fg:#C97EFF bg:#3E3D4F" 
+format = "[$ssh_symbol$hostname]($style)"
+
 [aws]
 symbol = " "
 style = "fg:#C97EFF bg:#3E3D4F" 
@@ -188,6 +193,11 @@ symbol = ""
 style = "fg:#C97EFF bg:#3E3D4F" 
 format = "[ $symbol $version]($style)"
 disabled = true
+
+[localip]
+style = "fg:#C97EFF bg:#3E3D4F" 
+format = "[ @$localipv4]($style)"
+disabled = false
 
 
 [cmd_duration]
