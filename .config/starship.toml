@@ -1,6 +1,7 @@
 format = """\
 [](fg:#2C2B3C)\
 $username\
+$localip\
 [](fg:#2C2B3C bg:#313041)\
 $directory\
 [](fg:#313041 bg:#353446)\
@@ -27,6 +28,12 @@ show_always = true
 style_user = "fg:#9C2DFF bg:#2C2B3C"
 style_root = "fg:#9C2DFF bg:#2C2B3C"
 format = '[ $user]($style)' # $user
+
+[localip]
+style = "fg:#9C2DFF bg:#2C2B3C" 
+format = "[ @$localipv4]($style)"
+# disabled = false
+disabled = true
 
 [directory]
 style = "fg:#AB48FF bg:#313041"
@@ -82,6 +89,7 @@ format = '[$merge] ($style)'
 ssh_symbol = " 🌐"
 style = "fg:#C97EFF bg:#3E3D4F" 
 format = "[$ssh_symbol$hostname]($style)"
+disabled = true
 
 [aws]
 symbol = " "
@@ -193,11 +201,6 @@ symbol = ""
 style = "fg:#C97EFF bg:#3E3D4F" 
 format = "[ $symbol $version]($style)"
 disabled = true
-
-[localip]
-style = "fg:#C97EFF bg:#3E3D4F" 
-format = "[ @$localipv4]($style)"
-disabled = false
 
 
 [cmd_duration]
