@@ -7,11 +7,18 @@ set -g fish_greeting
 ### Alias
 alias py='python3'
 alias update='sudo apt update && sudo apt upgrade -y'
-alias personal='cd /home/aarondev/Documents/PersonalProjects'
-alias matrix='cd /home/aarondev/Documents/Matrix'
+alias react='cd /home/aarondev/Documents/Code/PersonalProjects/reactZeroToHero'
+alias matrix='cd /home/aarondev/Documents/Code/Matrix'
+alias work='cd /home/aarondev/Documents/Code/PersonalProjects/Work/'
+alias personal='cd /home/aarondev/Documents/Code/PersonalProjects/'
+alias dots='cd /home/aarondev/Documents/dotfiles/'
 
 ### CONDA PATH
 set -x PATH $PATH /home/aarondev/anaconda3/bin/
+
+### Node.js route to PATH
+set -x PATH $PATH /home/aarondev/.nvm/versions/node/v20.11.0/bin/
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -25,6 +32,3 @@ else
     end
 end
 # <<< conda initialize <<<
-
-### Node.js route to PATH
-set -x PATH $PATH /home/aarondev/.nvm/versions/node/v20.11.0/bin/
