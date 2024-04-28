@@ -370,6 +370,29 @@
       "selectionBackground": "#FFFFFF",
       "white": "#f1f1f1",
       "yellow": "#3D2AFF"
+    },
+    {
+      "background": "#1F1F28",
+      "black": "#1F1F28",
+      "blue": "#223249",
+      "brightBlack": "#727169",
+      "brightBlue": "#7E9CD8",
+      "brightCyan": "#6A9589",
+      "brightGreen": "#98BB6C",
+      "brightPurple": "#7E9CD8",
+      "brightRed": "#E82424",
+      "brightWhite": "#6A9589",
+      "brightYellow": "#98BB6C",
+      "cursorColor": "#DCD7BA",
+      "cyan": "#2B4FFF",
+      "foreground": "#DCD7BA",
+      "green": "#76946A",
+      "name": "kanagawa",
+      "purple": "#938AA9",
+      "red": "#C34043",
+      "selectionBackground": "#FFFFFF",
+      "white": "#DCD7BA",
+      "yellow": "#DCA561"
     }
   ],
   "themes": []
