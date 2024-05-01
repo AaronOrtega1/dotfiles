@@ -87,118 +87,118 @@ format = '[$merge] ($style)'
 
 [hostname]
 ssh_symbol = " 🌐"
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = "[$ssh_symbol$hostname]($style)"
 disabled = true
 
 [aws]
 symbol = " "
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [conda]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [dart]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [c]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [docker_context]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol $context]($style) $path '
 
 [elixir]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [elm]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [golang]
 symbol = "ﳑ"
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [haskell]
 symbol = "λ"
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [java]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [julia]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [lua]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [nim]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [nix_shell]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [nodejs]
 symbol = "󰎙"
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [perl]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [php]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [python]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [ruby]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [rust]
 symbol = "🦀"
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [swift]
 symbol = "ﯣ"
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [package]
 symbol = ""
-style = "fg:#E82424 bg:#3E3D4F"
+style = "fg:#FF5D62 bg:#3E3D4F"
 format = "[ $symbol $version]($style)"
 disabled = true
 
