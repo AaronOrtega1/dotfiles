@@ -57,7 +57,8 @@ horiz_bar: &horizontal_bar
   horizontal: "b"
   components_left:
     - type: "text"
-      text: " aaronDev "
+      text: "  "
+      font_size: "24px"
       foreground: "#957fb8"
     - type: "workspaces"
       focused_workspace_background: "#21262d"
