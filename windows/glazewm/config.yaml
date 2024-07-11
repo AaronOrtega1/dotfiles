@@ -25,10 +25,10 @@ general:
 
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "5px"
+  inner_gap: "4px"
 
   # Gap between windows and the screen edge.
-  outer_gap: "5px"
+  outer_gap: "4px"
 
 # Highlight active/inactive windows with a colored border.
 # ** Exclusive to Windows 11 due to API limitations.
@@ -42,10 +42,10 @@ focus_borders:
     color: "#343A41"
 
 horiz_bar: &horizontal_bar
-  offset_x: 5
-  offset_y: 5
+  offset_x: 0
+  offset_y: 0
   font_family: "FiraCode Nerd Font Mono"
-  height: 30
+  height: 32
   border_radius: 0
   position: "top"
   background: "#16161D"
@@ -78,12 +78,10 @@ horiz_bar: &horizontal_bar
     #   label: "<attr fs='20' fg='#957fb8'></attr>{percent_usage}%"
     #   margin: "0px 10px 0px 0px"
     #   refresh_interval_ms: 1000
-  components_center:
-    - type: "window title"
   components_right:
-    - type: "system tray"
-      padding: "4px 6px"
-      foreground: "#957fb8"
+    # - type: "system tray"
+    #   padding: "4px 6px"
+    #   foreground: "#957fb8"
     - type: "network"
       foreground: "#957fb8"
       padding: "0 8px"
@@ -103,7 +101,7 @@ horiz_bar: &horizontal_bar
       label_high: "<attr fs='25' fg='#957fb8'></attr>{volume_level}%"
       label_mute: "<attr fs='25' fg='#957fb8'></attr>{volume_level}%"
     - type: "battery"
-      label_draining: "<attr fs='15' fg='#957fb8'>󰁹</attr>{battery_level}% remaining"
+      label_draining: "<attr fs='15' fg='#957fb8'>󰁹</attr>{battery_level}%"
       label_power_saver: "<attr fs='15' fg='#957fb8'>󰂃</attr>{battery_level}%"
       label_charging: "<attr fs='15' fg='#957fb8'>󰂄</attr>{battery_level}%"
     - type: "binding mode"
@@ -111,7 +109,7 @@ horiz_bar: &horizontal_bar
       margin: "0 4px 0 0"
       padding: "0 8px"
     - type: "clock"
-      foreground: "#957fb8"
+      foreground: "#DCD7BA"
       time_formatting: "hh:mm:ss tt  dd/M/yyyy  "
       margin: "0 0 0 10px"
 
@@ -121,7 +119,8 @@ vert_bar: &vertical_bar
   foreground: "#DCD7BA"
   components_left:
     - type: "text"
-      text: " aaronDev "
+      text: "  "
+      font_size: "24px"
       foreground: "#957fb8"
     - type: "workspaces"
       focused_workspace_background: "#21262d"
@@ -129,36 +128,67 @@ vert_bar: &vertical_bar
       displayed_workspace_background: "#21262d"
       default_workspace_background: "transparent"
   components_right:
+    # - type: "system tray"
+    #   padding: "4px 6px"
+    #   foreground: "#957fb8"
+    - type: "network"
+      foreground: "#957fb8"
+      padding: "0 8px"
+      font_family: "FiraCode Nerd Font Mono"
+      label_no_internet: ""
+      label_ethernet: "󰈁"
+      label_wifi_strength_0: "󰤯"
+      label_wifi_strength_25: "󰤟"
+      label_wifi_strength_50: "󰤢"
+      label_wifi_strength_75: "󰤥"
+      label_wifi_strength_100: "󰤨"
+    - type: "volume"
+      label: "<attr fs='25' fg='#957fb8'></attr>{volume_level}%"
+      padding: "0 8px"
+      label_low: "<attr fs='25' fg='#957fb8'></attr>{volume_level}%"
+      label_medium: "<attr fs='25' fg='#957fb8'></attr>{volume_level}%"
+      label_high: "<attr fs='25' fg='#957fb8'></attr>{volume_level}%"
+      label_mute: "<attr fs='25' fg='#957fb8'></attr>{volume_level}%"
+    - type: "battery"
+      label_draining: "<attr fs='15' fg='#957fb8'>󰁹</attr>{battery_level}%"
+      label_power_saver: "<attr fs='15' fg='#957fb8'>󰂃</attr>{battery_level}%"
+      label_charging: "<attr fs='15' fg='#957fb8'>󰂄</attr>{battery_level}%"
     - type: "binding mode"
       background: "#ffffff33"
       margin: "0 4px 0 0"
       padding: "0 8px"
     - type: "clock"
-      foreground: "#957fb8"
-      time_formatting: "hh:mm tt  M/d"
+      foreground: "#DCD7BA"
+      time_formatting: "hh:mm:ss tt  dd/M/yyyy  "
       margin: "0 0 0 10px"
 
 bars:
   - bind_to_monitor: 1
-    <<: *vertical_bar
-  - bind_to_monitor: 2
     <<: *horizontal_bar
+  - bind_to_monitor: 2
+    <<: *vertical_bar
   - bind_to_monitor: 3
     <<: *horizontal_bar
 
-group_names: ["一", "二", "三", "四", "五", "六", "七", "八", "九"]
-# group_labels = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-
 workspaces:
   - name: "1"
+    display_name: "一"
   - name: "2"
+    display_name: "二"
   - name: "3"
+    display_name: "三"
   - name: "4"
+    display_name: "四"
   - name: "5"
+    display_name: "五"
   - name: "6"
+    display_name: "六"
   - name: "7"
+    display_name: "七"
   - name: "8"
+    display_name: "八"
   - name: "9"
+    display_name: "九"
 
 window_rules:
   # Task Manager requires admin privileges to manage and should be ignored unless running
@@ -198,10 +228,12 @@ binding_modes:
 
 keybindings:
   # Custom keybindings
-  - command: "exec 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe'"
+  - command: "exec 'C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Firefox Developer Edition.lnk'"
     binding: "Alt+W"
   - command: "exec explorer"
     binding: "Alt+E"
+  - command: "exec 'C:\\Users\\aaron\\AppData\\Local\\Programs\\Obsidian\\Obsidian.exe'"
+    binding: "Alt+O"
 
   # Shift focus in a given direction.
   - command: "focus left"
