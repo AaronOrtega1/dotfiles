@@ -12,6 +12,8 @@ alias matrix='cd /home/aarondev/Documents/Code/Matrix'
 alias work='cd /home/aarondev/Documents/Code/PersonalProjects/Work/'
 alias personal='cd /home/aarondev/Documents/Code/PersonalProjects/'
 alias dots='cd /home/aarondev/Documents/dotfiles/'
+alias portfolio='cd /home/aarondev/Documents/Code/PersonalProjects/portfolio/'
+alias notes='cd /mnt/d/aaronDev/Documents/Obsidian-Vault'
 
 ### CONDA PATH
 set -x PATH $PATH /home/aarondev/anaconda3/bin/
