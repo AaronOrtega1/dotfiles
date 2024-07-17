@@ -25,18 +25,18 @@ disabled = true
 # You can also replace your username with a neat symbol like  to save some space
 [username]
 show_always = true
-style_user = "fg:#9C2DFF bg:#2C2B3C"
-style_root = "fg:#9C2DFF bg:#2C2B3C"
+style_user = "fg:#F38BA8 bg:#2C2B3C"
+style_root = "fg:#F38BA8 bg:#2C2B3C"
 format = '[ $user]($style)' # $user
 
 [localip]
-style = "fg:#9C2DFF bg:#2C2B3C" 
+style = "fg:#F38BA8 bg:#2C2B3C"
 format = "[ @$localipv4]($style)"
 # disabled = false
 disabled = true
 
 [directory]
-style = "fg:#AB48FF bg:#313041"
+style = "fg:#89B4FA bg:#313041"
 format = "[ $path ]($style)"
 truncation_length = 2
 truncation_symbol = "…/"
@@ -51,7 +51,6 @@ truncation_symbol = "…/"
 "Pictures" = " "
 "Videos" = " "
 "Notes" = "󰠮"
-"Code" = ""
 # Keep in mind that the order matters. For example:
 # "Important Documents" = "  "
 # will not be replaced, because "Documents" was already substituted before.
@@ -61,12 +60,12 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = ""
 # style = "fg:#45478D bg:#353446"
-style = "fg:#BA63FF bg:#353446"
+style = "fg:#94e2d5 bg:#353446"
 format = '[ $symbol $branch(:$remote_branch) ]($style)'
 
 [git_status]
 # style = "fg:#45478D bg:#353446"
-style = "fg:#BA63FF bg:#353446"
+style = "fg:#94e2d5 bg:#353446"
 # ahead = "⇡${count}"
 #truncation_length = 2
 conflicted = '🏳'
@@ -81,127 +80,126 @@ deleted = ' '
 format = '[$all_status$ahead_behind ]($style)'
 
 [git_state]
-style = "fg:#BA63FF bg:#353446"
+style = "fg:#94e2d5 bg:#353446"
 merge = ''
 format = '[$merge] ($style)'
 
 [hostname]
 ssh_symbol = " 🌐"
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = "[$ssh_symbol$hostname]($style)"
 disabled = true
 
 [aws]
 symbol = " "
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [conda]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [dart]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [c]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [docker_context]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol $context]($style) $path '
 
 [elixir]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [elm]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [golang]
 symbol = "ﳑ"
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [haskell]
 symbol = "λ"
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [java]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [julia]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [lua]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [nim]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [nix_shell]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [nodejs]
 symbol = "󰎙"
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [perl]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [php]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [python]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F"
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [ruby]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [rust]
 symbol = "🦀"
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [swift]
 symbol = "ﯣ"
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = '[ $symbol ($version )]($style)'
 
 [package]
 symbol = ""
-style = "fg:#C97EFF bg:#3E3D4F" 
+style = "fg:#F5C2E7 bg:#3E3D4F"
 format = "[ $symbol $version]($style)"
 disabled = true
-
 
 [cmd_duration]
 min_time = 1

@@ -304,7 +304,8 @@ keybindings:
 
   # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
   # to start Windows Terminal and Git Bash respectively.
-  - command: "exec wt"
+  # - command: "exec 'C:\\Users\\aaron\\AppData\\Local\\Programs\\Obsidian\\Obsidian.exe'"
+  - command: "exec 'C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Alacritty\\Alacritty'"
     binding: "Alt+Enter"
 
   # Focus the workspace that last had focus.
