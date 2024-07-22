@@ -1,29 +1,4 @@
 return {
-  -- tools
-  {
-    "williamboman/mason.nvim",
-    opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, {
-        "luacheck",
-        "shellcheck",
-        "shfmt",
-        "tailwindcss-language-server",
-        "typescript-language-server",
-        "css-lsp",
-        "eslint-lsp",
-        "html-lsp",
-        "jdtls",
-        "json-lsp",
-        "prettier",
-        "pyright",
-        "ruff-lsp",
-        "shellcheck",
-        "shfmt",
-        "stylua",
-      })
-    end,
-  },
-
   -- lsp servers
   {
     "neovim/nvim-lspconfig",
@@ -136,12 +111,5 @@ return {
       },
       setup = {},
     },
-  },
-  {
-    "nvim-cmp",
-    dependencies = { "hrsh7th/cmp-emoji" },
-    opts = function(_, opts)
-      table.insert(opts.sources, { name = "emoji" })
-    end,
   },
 }
