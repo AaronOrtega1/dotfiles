@@ -58,13 +58,14 @@ alias update='sudo apt update && sudo apt upgrade -y'
 alias conf='cd /home/aarondev/.config/'
 alias ls='exa -alh'
 alias c='clear'
+alias t='tmux'
 alias work='cd /home/aarondev/Documents/Code/PersonalProjects/Work/'
 
 # Shell integration
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
 
-# nvm
+# NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -84,4 +85,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
