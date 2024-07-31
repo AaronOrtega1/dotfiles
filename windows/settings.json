@@ -17,11 +17,8 @@
       "keys": "ctrl+shift+3"
     },
     {
-      "command": {
-        "action": "moveFocus",
-        "direction": "up"
-      },
-      "keys": "alt+up"
+      "command": "paste",
+      "keys": "ctrl+v"
     },
     {
       "command": {
@@ -31,8 +28,11 @@
       "keys": "ctrl+shift+2"
     },
     {
-      "command": "paste",
-      "keys": "ctrl+v"
+      "command": {
+        "action": "moveFocus",
+        "direction": "up"
+      },
+      "keys": "alt+up"
     },
     {
       "command": {
@@ -56,15 +56,15 @@
       "keys": "ctrl+shift+4"
     },
     {
-      "command": "find",
-      "keys": "ctrl+shift+f"
-    },
-    {
       "command": {
         "action": "newTab",
         "index": 4
       },
       "keys": "ctrl+shift+5"
+    },
+    {
+      "command": "find",
+      "keys": "ctrl+shift+f"
     },
     {
       "command": {
@@ -99,10 +99,10 @@
   ],
   "profiles": {
     "defaults": {
-      "colorScheme": "kanagawa",
+      "colorScheme": "catppuccin-mocha",
       "cursorShape": "filledBox",
       "font": {
-        "face": "FiraCode Nerd Font Mono"
+        "face": "GeistMono Nerd Font Mono"
       },
       "opacity": 95,
       "scrollbarState": "hidden",
@@ -147,6 +147,18 @@
         "hidden": true,
         "name": "Ubuntu",
         "source": "Windows.Terminal.Wsl"
+      },
+      {
+        "guid": "{b6007036-1d9d-5aff-81b5-8696628a6d82}",
+        "hidden": false,
+        "name": "Developer Command Prompt for VS 2022",
+        "source": "Windows.Terminal.VisualStudio"
+      },
+      {
+        "guid": "{6fdeae69-f7c5-5d3d-9eeb-203081a45a50}",
+        "hidden": false,
+        "name": "Developer PowerShell for VS 2022",
+        "source": "Windows.Terminal.VisualStudio"
       }
     ]
   },
@@ -196,6 +208,29 @@
       "selectionBackground": "#FFFFFF",
       "white": "#CCCCCC",
       "yellow": "#C19C00"
+    },
+    {
+      "background": "#24273A",
+      "black": "#494D64",
+      "blue": "#8AADF4",
+      "brightBlack": "#5B6078",
+      "brightBlue": "#8AADF4",
+      "brightCyan": "#8BD5CA",
+      "brightGreen": "#A6DA95",
+      "brightPurple": "#F5BDE6",
+      "brightRed": "#ED8796",
+      "brightWhite": "#A5ADCB",
+      "brightYellow": "#EED49F",
+      "cursorColor": "#F4DBD6",
+      "cyan": "#8BD5CA",
+      "foreground": "#CAD3F5",
+      "green": "#A6DA95",
+      "name": "Catppuccin Macchiato",
+      "purple": "#F5BDE6",
+      "red": "#ED8796",
+      "selectionBackground": "#5B6078",
+      "white": "#B8C0E0",
+      "yellow": "#EED49F"
     },
     {
       "background": "#1F1D27",
@@ -589,5 +624,6 @@
       "yellow": "#3D2AFF"
     }
   ],
+  "showTerminalTitleInTitlebar": true,
   "themes": []
 }
