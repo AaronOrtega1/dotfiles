@@ -42,14 +42,14 @@ focus_borders:
     color: "#343A41"
 
 horiz_bar: &horizontal_bar
-  offset_x: 0
-  offset_y: 0
+  offset_x: "4px"
+  offset_y: "4px"
   # font_family: "GeistMono Nerd Font Mono"
   font_family: "FiraCode Nerd Font Mono"
   height: 32
-  border_radius: 0
+  border_radius: 6
   position: "top"
-  background: "#16161D"
+  background: "#1f1f28"
   foreground: "#DCD7BA"
   font_size: "12px"
   border_color: "#343A41"
@@ -113,6 +113,13 @@ horiz_bar: &horizontal_bar
       label_draining: "<attr fs='15' fg='#957fb8'>󰁹</attr>{battery_level}%"
       label_power_saver: "<attr fs='15' fg='#957fb8'>󰂃</attr>{battery_level}%"
       label_charging: "<attr fs='15' fg='#957fb8'>󰂄</attr>{battery_level}%"
+    - type: "tiling direction"
+      label_horizontal: "⮂"
+      label_vertical: "⮁"
+      foreground: "#957FB8"
+      background: "#ffffff33"
+      margin: "0 4px"
+      padding: "0 8px"
     - type: "binding mode"
       background: "#ffffff33"
       margin: "0 4px 0 0"
@@ -124,8 +131,9 @@ horiz_bar: &horizontal_bar
 
 vert_bar: &vertical_bar
   <<: *horizontal_bar
-  background: "#16161D"
+  background: "#1f1f28"
   foreground: "#DCD7BA"
+  border_color: "#343A41"
   components_left:
     - type: "text"
       text: "  "
@@ -170,6 +178,13 @@ vert_bar: &vertical_bar
       label_draining: "<attr fs='15' fg='#957fb8'>󰁹</attr>{battery_level}%"
       label_power_saver: "<attr fs='15' fg='#957fb8'>󰂃</attr>{battery_level}%"
       label_charging: "<attr fs='15' fg='#957fb8'>󰂄</attr>{battery_level}%"
+    - type: "tiling direction"
+      label_horizontal: "⮂"
+      label_vertical: "⮁"
+      foreground: "#957FB8"
+      background: "#ffffff33"
+      margin: "0 4px"
+      padding: "0 8px"
     - type: "binding mode"
       background: "#ffffff33"
       margin: "0 4px 0 0"
