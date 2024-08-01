@@ -44,6 +44,7 @@ focus_borders:
 horiz_bar: &horizontal_bar
   offset_x: 0
   offset_y: 0
+  # font_family: "GeistMono Nerd Font Mono"
   font_family: "FiraCode Nerd Font Mono"
   height: 32
   border_radius: 0
@@ -78,6 +79,13 @@ horiz_bar: &horizontal_bar
     #   label: "<attr fs='20' fg='#957fb8'></attr>{percent_usage}%"
     #   margin: "0px 10px 0px 0px"
     #   refresh_interval_ms: 1000
+  components_center:
+    - type: "text"
+      text: "Porsche 911 GT3 RS"
+      font_size: "12px"
+      # font_family: "GeistMono Nerd Font Mono"
+      font_family: "FiraCode Nerd Font Mono"
+      foreground: "#DCD7BA"
   components_right:
     # - type: "system tray"
     #   padding: "4px 6px"
@@ -85,6 +93,7 @@ horiz_bar: &horizontal_bar
     - type: "network"
       foreground: "#957fb8"
       padding: "0 8px"
+      # font_family: "GeistMono Nerd Font Mono"
       font_family: "FiraCode Nerd Font Mono"
       label_no_internet: ""
       label_ethernet: "󰈁"
@@ -127,6 +136,13 @@ vert_bar: &vertical_bar
       focused_workspace_foreground: "#957fb8"
       displayed_workspace_background: "#21262d"
       default_workspace_background: "transparent"
+  components_center:
+    - type: "text"
+      text: "Porsche 911 GT3 RS"
+      font_size: "12px"
+      # font_family: "GeistMono Nerd Font Mono"
+      font_family: "FiraCode Nerd Font Mono"
+      foreground: "#DCD7BA"
   components_right:
     # - type: "system tray"
     #   padding: "4px 6px"
@@ -134,6 +150,7 @@ vert_bar: &vertical_bar
     - type: "network"
       foreground: "#957fb8"
       padding: "0 8px"
+      # font_family: "GeistMono Nerd Font Mono"
       font_family: "FiraCode Nerd Font Mono"
       label_no_internet: ""
       label_ethernet: "󰈁"
