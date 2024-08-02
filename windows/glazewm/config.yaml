@@ -50,7 +50,8 @@ horiz_bar: &horizontal_bar
   border_radius: 6
   position: "top"
   background: "#1f1f28"
-  foreground: "#DCD7BA"
+  # foreground: "#DCD7BA"
+  foreground: "#CAD3F5"
   font_size: "12px"
   border_color: "#343A41"
   border_width: 1
@@ -60,7 +61,8 @@ horiz_bar: &horizontal_bar
     - type: "text"
       text: "  "
       font_size: "24px"
-      foreground: "#957fb8"
+      # foreground: "#957fb8"
+      foreground: "#CAD3F5"
     - type: "workspaces"
       focused_workspace_background: "#21262d"
       focused_workspace_foreground: "#957fb8"
@@ -85,7 +87,8 @@ horiz_bar: &horizontal_bar
       font_size: "12px"
       # font_family: "GeistMono Nerd Font Mono"
       font_family: "FiraCode Nerd Font Mono"
-      foreground: "#DCD7BA"
+      # foreground: "#DCD7BA"
+      foreground: "#CAD3F5"
   components_right:
     # - type: "system tray"
     #   padding: "4px 6px"
@@ -125,14 +128,16 @@ horiz_bar: &horizontal_bar
       margin: "0 4px 0 0"
       padding: "0 8px"
     - type: "clock"
-      foreground: "#DCD7BA"
+      # foreground: "#DCD7BA"
+      foreground: "#CAD3F5"
       time_formatting: "hh:mm:ss tt  dd/M/yyyy  "
       margin: "0 0 0 10px"
 
 vert_bar: &vertical_bar
   <<: *horizontal_bar
   background: "#1f1f28"
-  foreground: "#DCD7BA"
+  # foreground: "#DCD7BA"
+  foreground: "#CAD3F5"
   border_color: "#343A41"
   components_left:
     - type: "text"
@@ -150,7 +155,8 @@ vert_bar: &vertical_bar
       font_size: "12px"
       # font_family: "GeistMono Nerd Font Mono"
       font_family: "FiraCode Nerd Font Mono"
-      foreground: "#DCD7BA"
+      # foreground: "#DCD7BA"
+      foreground: "#CAD3F5"
   components_right:
     # - type: "system tray"
     #   padding: "4px 6px"
@@ -190,7 +196,8 @@ vert_bar: &vertical_bar
       margin: "0 4px 0 0"
       padding: "0 8px"
     - type: "clock"
-      foreground: "#DCD7BA"
+      # foreground: "#DCD7BA"
+      foreground: "#CAD3F5"
       time_formatting: "hh:mm:ss tt  dd/M/yyyy  "
       margin: "0 0 0 10px"
 

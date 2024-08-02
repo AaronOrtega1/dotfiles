@@ -63,6 +63,7 @@ alias work='cd /home/aarondev/Documents/Code/PersonalProjects/Work/'
 alias vs='cd /mnt/c/Users/aaron/AppData/Roaming/Code/'
 alias gwm='cd /mnt/c/Users/aaron/.glaze-wm/'
 alias fl='cd /mnt/c/Users/aaron/AppData/Roaming/FlowLauncher/'
+alias ff='cd /mnt/c/Users/aaron/AppData/Roaming/Mozilla/Firefox/Profiles/33dy0j9y.dev-edition-default/'
 
 # Shell integration
 eval "$(fzf --zsh)"
