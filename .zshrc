@@ -60,6 +60,9 @@ alias ls='exa -alh'
 alias c='clear'
 alias t='tmux'
 alias work='cd /home/aarondev/Documents/Code/PersonalProjects/Work/'
+alias vs='cd /mnt/c/Users/aaron/AppData/Roaming/Code/'
+alias gwm='cd /mnt/c/Users/aaron/.glaze-wm/'
+alias fl='cd /mnt/c/Users/aaron/AppData/Roaming/FlowLauncher/'
 
 # Shell integration
 eval "$(fzf --zsh)"
