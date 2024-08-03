@@ -5,13 +5,13 @@
         <ResourceDictionary Source="pack://application:,,,/Themes/Base.xaml" />
     </ResourceDictionary.MergedDictionaries>
     <Style x:Key="ItemGlyph"  BasedOn="{StaticResource BaseGlyphStyle}" TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#DCD7BA" />
+        <Setter Property="Foreground" Value="#CAD3F5" />
     </Style>
     <Style x:Key="QueryBoxStyle" BasedOn="{StaticResource BaseQueryBoxStyle}" TargetType="{x:Type TextBox}">
         <Setter Property="SelectionBrush" Value="#223249"/>
         <Setter Property="FontSize" Value="24" />
         <Setter Property="Background" Value="#1f1f28" />
-        <Setter Property="Foreground" Value="#DCD7BA" />
+        <Setter Property="Foreground" Value="#CAD3F5" />
         <Setter Property="CaretBrush" Value="#957FB8" />
         <Setter Property="FontSize" Value="26" />
         <Setter Property="Padding" Value="0 4 66 0" />
@@ -40,10 +40,10 @@
 
     <!-- Item Style -->
     <Style x:Key="ItemTitleStyle"  BasedOn="{StaticResource BaseItemTitleStyle}" TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#DCD7BA" />
+        <Setter Property="Foreground" Value="#CAD3F5" />
     </Style>
     <Style x:Key="ItemSubTitleStyle" BasedOn="{StaticResource BaseItemSubTitleStyle}" TargetType="{x:Type TextBlock}" >
-        <Setter Property="Foreground" Value="#DCD7BA" />
+        <Setter Property="Foreground" Value="#CAD3F5" />
         <Setter Property="FontSize" Value="13" />
     </Style>
     <Style x:Key="ItemNumberStyle" BasedOn="{StaticResource BaseItemNumberStyle}" TargetType="{x:Type TextBlock}">
