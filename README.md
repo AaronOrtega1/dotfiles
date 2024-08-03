@@ -77,6 +77,9 @@ git clone https://codeberg.org/awwpotato/PotatoFox.git
 Download fonts:
 
 - https://www.nerdfonts.com/font-downloads
+  - GeistMono Nerd Font
+  - FiraCode Nerd Font
+  - Symbols Nerd Font
 - https://vercel.com/font
 
 ---
@@ -146,3 +149,5 @@ https://codeberg.org/awwpotato/PotatoFox
 https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
 
 https://brew.sh/
+
+https://starship.rs/
