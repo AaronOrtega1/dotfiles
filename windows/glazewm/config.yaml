@@ -272,8 +272,8 @@ keybindings:
     binding: "Alt+W"
   - command: "exec explorer"
     binding: "Alt+E"
-  - command: "exec 'C:\\Users\\aaron\\AppData\\Local\\Programs\\Obsidian\\Obsidian.exe'"
-    binding: "Alt+O"
+  - command: "exec 'D:\\aaronDev\\AppData\\Obsidian.lnk'"
+    binding: "Alt+N"
 
   # Shift focus in a given direction.
   - command: "focus left"
