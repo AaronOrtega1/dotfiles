@@ -213,6 +213,7 @@ bars:
 workspaces:
   - name: "1"
     display_name: "一"
+    bind_to_monitor: 1
   - name: "2"
     display_name: "二"
   - name: "3"
@@ -229,6 +230,7 @@ workspaces:
     display_name: "八"
   - name: "9"
     display_name: "九"
+    bind_to_monitor: 2
 
 window_rules:
   # Task Manager requires admin privileges to manage and should be ignored unless running
@@ -270,6 +272,8 @@ keybindings:
   # Custom keybindings
   - command: "exec 'C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Firefox Developer Edition.lnk'"
     binding: "Alt+W"
+  - command: "exec 'C:\\Program Files\\Zen Browser\\zen.exe'"
+    binding: "Alt+Z"
   - command: "exec explorer"
     binding: "Alt+E"
   - command: "exec 'D:\\aaronDev\\AppData\\Obsidian.lnk'"
