@@ -1,3 +1,7 @@
+# initialize compinit first
+autoload -Uz compinit
+compinit
+
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -21,6 +25,7 @@ zinit light Aloxaf/fzf-tab
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
+zinit snippet OMZP::archlinux
 
 zinit cdreplay -q
 
@@ -50,7 +55,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias matrix='cd /home/aarondev/Documents/Code/Matrix/'
-alias notes='cd /mnt/d/aaronDev/Documents/127.0.0.1/'
+alias notes='cd /home/aarondev/Documents/127.0.0.1/'
 alias personal='cd /home/aarondev/Documents/Code/PersonalProjects/'
 alias dots='cd /home/aarondev/Documents/dotfiles/'
 alias py='python3'
@@ -59,11 +64,12 @@ alias conf='cd /home/aarondev/.config/'
 alias ls='exa -alh'
 alias c='clear'
 alias t='tmux'
-alias work='cd /home/aarondev/Documents/Code/PersonalProjects/Work/'
+alias work='cd /home/aarondev/Documents/Code/Work/'
 alias vs='cd /mnt/c/Users/aaron/AppData/Roaming/Code/'
 alias gwm='cd /mnt/c/Users/aaron/.glaze-wm/'
 alias fl='cd /mnt/c/Users/aaron/AppData/Roaming/FlowLauncher/'
 alias ff='cd /mnt/c/Users/aaron/AppData/Roaming/Mozilla/Firefox/Profiles/33dy0j9y.dev-edition-default/'
+alias hypr='cd /home/aarondev/.config/hypr/'
 
 # Shell integration
 eval "$(fzf --zsh)"
@@ -90,4 +96,10 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # Homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# initialize tmux
+if [ -z "$TMUX" ]; then
+    tmux
+fi
+
