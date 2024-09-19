@@ -2,9 +2,9 @@
 	"layer": "top",
 	"margin-top": 2,
   "margin-bottom": 2,
-	"modules-left": ["custom/launcher", "cpu", "memory", "hyprland/workspaces", "tray"],
+	"modules-left": ["custom/launcher", "cpu", "memory", "custom/image", "hyprland/workspaces", "tray"],
 	"modules-center": ["custom/spotify"],
-	"modules-right": ["network", "pulseaudio", "clock", "battery", "custom/power"],
+	"modules-right": [ "network", "pulseaudio", "clock", "battery", "custom/power"],
 	
 	"pulseaudio": {
 		"tooltip": false,
@@ -87,6 +87,10 @@
       "active": "",
       "default": ""
     }
-	}
+	},
+	"custom/image": {
+		"format": "󰄀 ",
+    "on-click": "bash ~/.config/hypr/scripts/screenshots.sh",
+	},
 }
 
