@@ -18,4 +18,16 @@ return {
       },
     },
   },
+  -- NeoTree
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    config = function()
+      require("neo-tree").setup({
+        window = {
+          position = "right", -- Cambia la posición a la derecha
+          width = 30, -- Ajusta el ancho si es necesario
+        },
+      })
+    end,
+  },
 }
