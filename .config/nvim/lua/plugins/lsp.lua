@@ -1,9 +1,25 @@
 return {
+  -- tools
+  {
+    "williamboman/mason.nvim",
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
+        "luacheck",
+        "shellcheck",
+        "shfmt",
+        "tailwindcss-language-server",
+        "typescript-language-server",
+        "css-lsp",
+        "intelephense",
+      })
+    end,
+  },
+
   -- lsp servers
   {
     "neovim/nvim-lspconfig",
     opts = {
-      inlay_hints = { enabled = true },
+      inlay_hints = { enabled = false },
       ---@type lspconfig.options
       servers = {
         cssls = {},
@@ -98,7 +114,7 @@ return {
                 unusedLocalExclude = { "_*" },
               },
               format = {
-                enable = true,
+                enable = false,
                 defaultConfig = {
                   indent_style = "space",
                   indent_size = "2",
@@ -108,8 +124,39 @@ return {
             },
           },
         },
+        emmet_ls = { -- Configuración para el servidor de Emmet
+          filetypes = { "html", "css", "javascript" },
+          init_options = {
+            html = {
+              options = {
+                ["bem.enabled"] = true,
+              },
+            },
+          },
+        },
       },
-      setup = {},
+      setup = {
+        emmet_ls = function(_, opts)
+          require("lspconfig").emmet_ls.setup({
+            on_attach = function(_, buffer)
+              vim.keymap.set(
+                "i",
+                "<C-e>",
+                "<C-y>emmet-expand-abbr",
+                { buffer = buffer, desc = "Expand Emmet abbreviation" }
+              )
+            end,
+          })
+          return true
+        end,
+      },
     },
+  },
+  {
+    "nvim-cmp",
+    dependencies = { "hrsh7th/cmp-emoji" },
+    opts = function(_, opts)
+      table.insert(opts.sources, { name = "emoji" })
+    end,
   },
 }

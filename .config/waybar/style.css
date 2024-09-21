@@ -42,7 +42,7 @@ window#waybar.hidden {
   border-radius: 2px;
 }
 
-#workspaces button.occupied {
+#workspaces button.urgent {
   color: #f28fad;
   background: transparent;
   font-size: 4px;

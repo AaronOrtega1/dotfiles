@@ -60,12 +60,12 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = ""
 # style = "fg:#45478D bg:#353446"
-style = "fg:#94e2d5 bg:#353446"
+style = "fg:#94E2D5 bg:#353446"
 format = '[ $symbol $branch(:$remote_branch) ]($style)'
 
 [git_status]
 # style = "fg:#45478D bg:#353446"
-style = "fg:#94e2d5 bg:#353446"
+style = "fg:#94E2D5 bg:#353446"
 # ahead = "⇡${count}"
 #truncation_length = 2
 conflicted = '🏳'
@@ -80,7 +80,7 @@ deleted = ' '
 format = '[$all_status$ahead_behind ]($style)'
 
 [git_state]
-style = "fg:#94e2d5 bg:#353446"
+style = "fg:#94E2D5 bg:#353446"
 merge = ''
 format = '[$merge] ($style)'
 
@@ -239,7 +239,7 @@ style = "bold #a6e3a1"
 disabled = true
 time_format = "%R"
 style = "bg:#3b4363"
-format = '[](fg:#333a56 $style)[  $time ](fg:#94e2d5 $style)'
+format = '[](fg:#333a56 $style)[  $time ](fg:#94E2D5 $style)'
 
 # Last param in the first line/row
 # fg:#3b4363 if time enabled
