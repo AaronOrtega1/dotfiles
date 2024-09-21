@@ -2,7 +2,7 @@ return {
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
   dependencies = {
-    "hrsh7th/cmp-buffer", -- source for text in buffer
+    -- "hrsh7th/cmp-buffer", -- source for text in buffer
     "hrsh7th/cmp-path", -- source for file system paths
     {
       "L3MON4D3/LuaSnip",
@@ -42,7 +42,6 @@ return {
         ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
         ["<C-e>"] = cmp.mapping.abort(), -- close completion window
         ["<CR>"] = cmp.mapping.confirm({ select = false }),
-        ["<Tab>"] = cmp.mapping.confirm({ select = true }), -- confirmar expansión de Emmet
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({
@@ -50,7 +49,7 @@ return {
         { name = "luasnip" }, -- snippets
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
-        { name = "copilot" }, -- copilot vim
+        -- { name = "copilot" }, -- copilot vim
       }),
 
       -- configure lspkind for vs-code like pictograms in completion menu
