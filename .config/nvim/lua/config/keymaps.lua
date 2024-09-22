@@ -66,3 +66,6 @@ vim.keymap.set(
 
 -- toggle folds
 vim.api.nvim_set_keymap("n", "za", "za", { noremap = true, silent = true })
+
+-- dismiss noice
+vim.api.nvim_set_keymap("n", "<leader>nd", "<cmd>Noice dismiss<cr>", { noremap = true, silent = true })
