@@ -72,6 +72,7 @@ alias ff='cd /mnt/c/Users/aaron/AppData/Roaming/Mozilla/Firefox/Profiles/33dy0j9
 alias hypr='cd /home/aarondev/.config/hypr/'
 alias docs='cd /home/aarondev/Documents/'
 alias n='nvim'
+alias ..='cd ..'
 
 # Shell integration
 eval "$(fzf --zsh)"
@@ -100,8 +101,15 @@ unset __conda_setup
 # Homebrew
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# initialize tmux
-if [ -z "$TMUX" ]; then
-    tmux
+# Initialize or attach to tmux session
+if command -v tmux &> /dev/null; then
+    # Verificar si ya está en una sesión tmux
+    if [ -z "$TMUX" ]; then
+        # Si hay sesiones disponibles, conectarse a la primera, de lo contrario crear una nueva
+        if tmux ls &> /dev/null; then
+            tmux attach-session -t 0
+        else
+            tmux new-session
+        fi
+    fi
 fi
-

@@ -1,71 +1,47 @@
-
-[aws]
-symbol = "  "
-style = "bold #f5e0dc"  # Roséwater
-
-[buf]
-symbol = " "
-style = "bold #f28fad"  # Flamingo
-
-[c]
-symbol = " "
-style = "bold #a6e3a1"  # Green
-
-[conda]
-symbol = " "
-style = "bold #94e2d5"  # Teal
-
-[crystal]
-symbol = " "
-style = "bold #cba6f7"  # Mauve
-
-[dart]
-symbol = " "
-style = "bold #f5e0dc"  # Roséwater
-
 [directory]
 read_only = " 󰌾"
-style = "bold #f2cdcd"  # Pink
+style = "bold #89b4fa"
 
-[docker_context]
-symbol = " "
-style = "bold #89b4fa"  # Blue
+[directory.substitutions]
+"~" = " ~"
+"Documents" = "󰝰 "
+"Downloads" = " "
+"Music" = "🎜 "
+"Pictures" = " "
+"Videos" = " "
+"Notes" = "󰠮"
 
-[elixir]
-symbol = " "
-style = "bold #cba6f7"  # Mauve
-
-[elm]
-symbol = " "
-style = "bold #fab387"  # Peach
-
-[fennel]
-symbol = " "
-style = "bold #f28fad"  # Flamingo
+[character]
+success_symbol = '[❯](#a6e3a1) '
+error_symbol = '[❯](#f38ba8) '
 
 [fossil_branch]
 symbol = " "
-style = "bold #f38ba8"  # Red
+style = "bold #94e2d5"  # Teal
 
 [git_branch]
 symbol = " "
-style = "bold #f38ba8"  # Red
+style = "bold #94e2d5"  # Teal
+
+[git_status]
+# style = "fg:#45478D bg:#353446"
+style = "fg:#94e2d5"
+# ahead = "⇡${count}"
+#truncation_length = 2
+conflicted = '🏳'
+up_to_date = ''
+untracked = ' '
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+stashed = ' '
+modified = ' '
+renamed = '襁 '
+deleted = ' '
+format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
 symbol = " "
 style = "bold #a6e3a1"  # Green
-
-[guix_shell]
-symbol = " "
-style = "bold #94e2d5"  # Teal
-
-[haskell]
-symbol = " "
-style = "bold #fab387"  # Peach
-
-[haxe]
-symbol = " "
-style = "bold #f5e0dc"  # Roséwater
 
 [hg_branch]
 symbol = " "
@@ -74,46 +50,6 @@ style = "bold #f38ba8"  # Red
 [hostname]
 ssh_symbol = " "
 style = "bold #94e2d5"  # Teal
-
-[java]
-symbol = " "
-style = "bold #f5c2e7"  # Pink
-
-[julia]
-symbol = " "
-style = "bold #cba6f7"  # Mauve
-
-[kotlin]
-symbol = " "
-style = "bold #89b4fa"  # Blue
-
-[lua]
-symbol = " "
-style = "bold #a6e3a1"  # Green
-
-[memory_usage]
-symbol = "󰍛 "
-style = "bold #fab387"  # Peach
-
-[meson]
-symbol = "󰔷 "
-style = "bold #f5e0dc"  # Roséwater
-
-[nim]
-symbol = "󰆥 "
-style = "bold #fab387"  # Peach
-
-[nix_shell]
-symbol = " "
-style = "bold #94e2d5"  # Teal
-
-[nodejs]
-symbol = " "
-style = "bold #a6e3a1"  # Green
-
-[ocaml]
-symbol = " "
-style = "bold #fab387"  # Peach
 
 [os.symbols]
 Alpaquita = " "
@@ -162,15 +98,11 @@ Windows = "󰍲 "
 
 [package]
 symbol = "󰏗 "
-style = "bold #f38ba8"  # Red
-
-[perl]
-symbol = " "
-style = "bold #cba6f7"  # Mauve
+style = "bold #a6e3a1"  # Red
 
 [php]
 symbol = " "
-style = "bold #f2cdcd"  # Pink
+style = "bold #a6e3a1"  # Pink
 
 [python]
 symbol = " "
@@ -178,17 +110,41 @@ style = "bold #a6e3a1"  # Green
 
 [ruby]
 symbol = " "
-style = "bold #f38ba8"  # Red
+style = "bold #a6e3a1"  # Red
 
 [rust]
 symbol = "󱘗 "
-style = "bold #fab387"  # Peach
+style = "bold #a6e3a1"  # Peach
 
-[swift]
-symbol = " "
-style = "bold #f2cdcd"  # Pink
+[aws]
+symbol = "  "
+style = "bold #a6e3a1"  # Roséwater
 
-[zig]
-symbol = " "
-style = "bold #fab387"  # Peach
+[c]
+symbol = " "
+style = "bold #a6e3a1"  # Green
 
+[conda]
+symbol = " "
+style = "bold #a6e3a1"  # Teal
+
+[docker_context]
+symbol = " "
+style = "bold #89b4fa"  # Blue
+
+[java]
+symbol = " "
+style = "bold #a6e3a1"  # Pink
+
+[lua]
+symbol = " "
+style = "bold #a6e3a1"  # Green
+
+[nodejs]
+symbol = " "
+style = "bold #a6e3a1"  # Green
+
+[cmd_duration]
+min_time = 500
+style = "bold #a6e3a1"  # Green
+disabled = false
