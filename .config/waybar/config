@@ -72,11 +72,11 @@
     "on-scroll-down": "playerctl previous",
 	},
 	"custom/launcher": {
-		"format": " ",
+		"format": "",
 		"on-click": "rofi -show drun",
 	},
 	"custom/power": {
-		"format": " ",
+		"format": "",
     "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh",
 	},
 	"hyprland/workspaces": {
@@ -89,7 +89,7 @@
     }
 	},
 	"custom/image": {
-		"format": "󰄀 ",
+		"format": "󰄀",
     "on-click": "bash ~/.config/hypr/scripts/screenshots.sh",
 	},
 }

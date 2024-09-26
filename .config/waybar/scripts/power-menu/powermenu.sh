@@ -93,7 +93,7 @@ $lock)
   elif [[ -x '/usr/bin/i3lock' ]]; then
     i3lock
   elif [[ -x '/usr/bin/Hyprland' ]]; then
-    swaylock
+    swaylock-fancy
   fi
   ;;
 $suspend)
