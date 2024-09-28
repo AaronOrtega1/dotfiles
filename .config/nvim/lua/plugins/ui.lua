@@ -48,12 +48,21 @@ return {
     end,
   },
 
+  -- notifications
   {
-    "rcarriga/nvim-notify",
     opts = {
+      "rcarriga/nvim-notify",
       timeout = 5000,
       background_colour = "#000000",
       render = "wrapped-compact",
+      stages = "fade_in_slide_out", -- Puedes personalizar esta parte
+      -- Cambiar la posición de las notificaciones a la esquina superior izquierda
+      top_down = false, -- Las notificaciones aparecen de abajo hacia arriba
+      -- Establecer la posición en el lado izquierdo
+      position = {
+        row = 0, -- Posición en el eje Y (fila)
+        col = 0, -- Posición en el eje X (columna)
+      },
     },
   },
 
@@ -131,7 +140,7 @@ return {
     config = function()
       require("neo-tree").setup({
         window = {
-          position = "left", -- Cambia la posición a la izquierda
+          position = "right", -- Cambia la posición a la izquierda
           width = 30, -- Ajusta el ancho si es necesario
         },
 
