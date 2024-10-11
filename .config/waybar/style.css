@@ -1,238 +1,353 @@
+/* Global Styling */
 * {
   border: none;
-  border-radius: 10px;
   font-family: "JetBrainsMono Nerd Font";
-  font-size: 14px;
-  min-height: 8px;
+  font-weight: bold;
+  font-size: 10px;
+  min-height: 10px;
 }
 
+@import "theme.css";
+
+/* Main Background */
 window#waybar {
-  background: transparent;
+  background: @background;
 }
 
-window#waybar.hidden {
-  opacity: 0.2;
+/* [new] Drop Shadow */
+window#waybar > box {
+  background-color: transparent;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 1);
+  margin: 2px 2px 2px 2px;
 }
 
-#window {
-  margin-top: 6px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: transparent;
-  background: transparent;
+/* Tooltip Styling */
+tooltip {
+  color: @foreground;
+  background: @background;
+  border: solid;
+  border-width: 1.5px;
+  border-radius: 7px;
+  border-color: white;
+}
+
+/* Workspace Button */
+#workspaces button {
+  color: @foreground;
+  border-radius: 8px;
+  box-shadow: none;
+  margin-top: 2px;
+  margin-right: 0px;
+  margin-bottom: 2px;
+  margin-left: 0px;
+  padding: 0px;
+  padding-right: 2px;
+  padding-left: 2px;
+  animation: ws_normal 20s ease-in-out 1;
+}
+
+/* Active Workspace Button */
+#workspaces button.active {
+  color: @active-fg;
+  background: @active-bg;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 1);
+  margin-right: 2px;
+  margin-left: 2px;
+  padding-right: 6px;
+  padding-left: 6px;
+  animation: ws_active 20s ease-in-out 1;
+  transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+/* Hover Effect for Workspace Buttons */
+#workspaces button:hover {
+  color: @hover-fg;
+  background: @hover-bg;
+  box-shadow: none;
+  animation: ws_hover 20s ease-in-out 1;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+/* General Module Styling */
+#custom-ws,
+#workspaces,
+#window,
+#custom-cpuinfo,
+#memory,
+#cpu,
+#clock,
+#custom-wifi,
+#pulseaudio,
+#backlight,
+#battery,
+#custom-power {
+  opacity: 1;
+  margin-bottom: 0px;
+  padding-right: 4px;
+  padding-left: 4px;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+}
+
+/* General Left Arrow Styling */
+#custom-left1,
+#custom-left2,
+#custom-left3,
+#custom-left4,
+#custom-left5,
+#custom-left6,
+#custom-left7,
+#custom-left8 {
+  font-size: 11pt;
+  text-shadow: -1px 0px 2px rgba(0, 0, 0, 1);
+}
+
+/* General Right Arrow Styling */
+#custom-right1,
+#custom-right2,
+#custom-right3,
+#custom-right4,
+#custom-right5 {
+  font-size: 11pt;
+  padding-right: 3px;
+  text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+}
+
+/* Color Definitions */
+@define-color workspaces        #181825;
+@define-color cpuinfo           #181825;
+@define-color memory            #1e1e2e;
+@define-color cpu               #313244;
+@define-color arch              #9399b2;
+@define-color time              #313244;
+@define-color date              #1e1e2e;
+@define-color wifi              #181825;
+@define-color pulseaudio        #181825;
+@define-color backlight         #1e1e2e;
+@define-color battery           #313244;
+@define-color power             #6c7086;
+
+/* Window Icon */
+#custom-ws {
+  background: @background;
+}
+
+/* Workspaces */
+#custom-left1 {
+  color: @workspaces;
+  background: @background;
+  padding-left: 2px;
 }
 
 #workspaces {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 6px;
-  padding-right: 10px;
-  font-size: 4px;
-  margin-bottom: 0px;
+  background: @workspaces;
+}
+
+#custom-right1 {
+  color: @workspaces;
+  background: @background;
+}
+
+/* Temperature */
+#custom-paddc {
+  padding-right: 3px;
+}
+
+#custom-left2 {
+  color: @cpuinfo;
+  background: @background;
   border-radius: 10px;
-  background: #161320;
-  transition: none;
+  padding-left: 3px;
 }
 
-#workspaces button {
-  transition: none;
-  color: #7984a4;
-  background: transparent;
-  font-size: 16px;
-  border-radius: 2px;
+#custom-cpuinfo {
+  background: @cpuinfo;
+  color: @foreground;
+  padding-left: 1px;
+  padding-right: 0px;
 }
 
-#workspaces button.urgent {
-  color: #f28fad;
-  background: transparent;
-  font-size: 4px;
-}
-
-#workspaces button.active {
-  color: #abe9b3;
-}
-
-#workspaces button:hover {
-  box-shadow: inherit;
-  text-shadow: inherit;
-  color: #e8a2af;
-  border-color: #e8a2af;
-}
-
-#workspaces button.active:hover {
-  color: #e8a2af;
-}
-
-#network {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 18px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #f8bd96;
-}
-
-#pulseaudio {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #fae3b0;
-}
-
-#battery {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #b5e8e0;
-}
-
-#battery.charging,
-#battery.plugged {
-  background-color: #161320;
-  color: #b5e8e0;
-}
-
-#battery.critical:not(.charging) {
-  color: #b5e8e0;
-  background-color: #161320;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes blink {
-  to {
-    background-color: #bf616a;
-    color: #b5e8e0;
-  }
-}
-
-#backlight,
-#custom-image {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 12px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #bd93f9;
-}
-
-#clock {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #abe9b3;
+/* Memory */
+#custom-left3 {
+  color: @memory;
+  background: @cpuinfo;
+  padding-left: 3px;
 }
 
 #memory {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  margin-bottom: 0px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #ddb6f2;
+  background: @memory;
+  color: @foreground;
+  padding-left: 1px;
+  padding-right: 0px;
+}
+
+/* CPU */
+#custom-left4 {
+  color: @cpu;
+  background: @memory;
+  padding-left: 3px;
 }
 
 #cpu {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  margin-bottom: 0px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #96cdfb;
+  background: @cpu;
+  color: @foreground;
 }
 
-#tray {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  margin-bottom: 0px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: #b5e8e0;
-  background: #161320;
+#custom-leftin1 {
+  color: @cpu;
+  font-size: 12.2pt;
+  margin-bottom: -2px;
 }
 
-#custom-launcher {
-  font-size: 16px;
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 7px;
-  padding-right: 12px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #89dceb;
+/* Arch Logo */
+#custom-left5 {
+  color: @arch;
+  background: @background;
+  text-shadow: -1px 0px 2px rgba(0, 0, 0, 0.6);
+  padding-left: 3px;
 }
 
-#custom-launcher:hover {
-  background: #89dceb;
-  color: #161320;
+#custom-arch {
+  color: black;
+  background: @arch;
+  font-size: 11pt;
+  margin-right: -1px;
+  margin-bottom: -2px;
+  padding-right: 0px;
+  padding-left: 3px;
+  text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
+}
+
+#custom-right2 {
+  color: @arch;
+  background: @background;
+}
+
+/* Time */
+#custom-rightin1 {
+  color: @time;
+  font-size: 12.2pt;
+  margin-bottom: -2px;
+}
+
+#clock.time {
+  background: @time;
+  color: @foreground;
+}
+
+#custom-right3 {
+  color: @time;
+  background: @date;
+}
+
+/* Date */
+#clock.date {
+  background: @date;
+  color: @foreground;
+}
+
+#custom-right4 {
+  color: @date;
+  background: @wifi;
+}
+
+/* Network */
+#custom-wi {
+  background: @wifi;
+  color: @foreground;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+  margin-right: -2px;
+  padding-left: 5px;
+}
+
+#custom-wifi {
+  background: @wifi;
+  color: @foreground;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+#custom-right5 {
+  color: @wifi;
+  background: @background;
+}
+
+/* Media Info */
+#custom-media {
+  background-color: @background;
+  color: @foreground;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+/* PulseAudio */
+#custom-left6 {
+  color: @pulseaudio;
+  background: @background;
+  padding-left: 3px;
+}
+
+#pulseaudio {
+  background: @pulseaudio;
+  color: @foreground;
+}
+
+/* Brightness */
+#custom-left7 {
+  color: @backlight;
+  background: @pulseaudio;
+  padding-left: 2px;
+}
+
+#backlight {
+  background: @backlight;
+  color: @foreground;
+}
+
+/* Battery */
+#custom-left8 {
+  color: @battery;
+  background: @backlight;
+  padding-left: 2px;
+}
+
+#battery {
+  background: @battery;
+  color: @foreground;
+}
+
+#battery.warning {
+  color: #f9e2af;
+}
+
+#battery.critical {
+  color: #f38ba8;
+}
+
+/* Power Button */
+#custom-leftin2 {
+  color: @battery;
+  background: @background;
+  font-size: 12.2pt;
+  margin-bottom: -2px;
 }
 
 #custom-power {
-  font-size: 16px;
-  margin-top: 6px;
-  margin-left: 8px;
-  margin-right: 8px;
-  padding-left: 7px;
-  padding-right: 12px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #f28fad;
+  color: @background;
+  background: @power;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 1);
+  border-radius: 20px;
+  margin-top: 2px;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  padding-right: 6px;
+  padding-left: 9px;
 }
 
-#custom-spotify {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #f2cdcd;
-}
-
-#idle_inhibitor {
-  background-color: #2d3436;
-}
-
-#idle_inhibitor.activated {
-  background-color: #ecf0f1;
-  color: #2d3436;
+#custom-power:hover {
+  color: @hover-fg;
+  background: @hover-bg;
+  box-shadow: none;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
