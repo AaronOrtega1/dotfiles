@@ -36,12 +36,14 @@
   "cpu": {
     "interval": 15,
     "format": " {}%",
-    "max-length": 10
+    "min-length": 7,
+    "max-length": 7
   },
   "memory": {
     "interval": 30,
     "format": " {}%",
-    "max-length": 10
+    "min-length": 7,
+    "max-length": 7
   },
   "custom/launcher": {
     "format": "",
@@ -50,8 +52,8 @@
   "clock#time": {
       "format": "󱑂 {:%I:%M}",
       "tooltip": false,
-      "min-length": 8,
-      "max-length": 8
+      "min-length": 7,
+      "max-length": 7
   },
   "clock#date": {
     "format": "󱨴 {:%m-%d}",
@@ -67,19 +69,19 @@
       }
     },
     "actions": {"on-click-right": "mode"},
-    "min-length": 8,
-    "max-length": 8
+    "min-length": 7,
+    "max-length": 7
   },
   "network": {
-    "format-wifi": " ",
+    "format-wifi": "  Wi-Fi",
     "format-disconnected": "⚠",
     "exec": "~/.config/waybar/scripts/essid.sh",
     "interval": 30,
     "tooltip": true,
     "tooltip-format": "{}",
     "on-click": "~/.config/waybar/scripts/wifimenu.sh",
-    "min-length": 7,
-    "max-length": 7
+    "min-length": 8,
+    "max-length": 8
   },
 
   "custom/media": {

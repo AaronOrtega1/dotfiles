@@ -24,6 +24,9 @@ window#waybar.hidden {
   background: transparent;
 }
 
+/* ================================================ */
+/* ================= LEFT MODULES ================= */
+/* ================================================ */
 #workspaces {
   margin-top: 6px;
   margin-left: 8px;
@@ -65,16 +68,88 @@ window#waybar.hidden {
   color: #e8a2af;
 }
 
+/* ================================================ */
+/* ================ CENTER MODULES ================ */
+/* ================================================ */
+#memory {
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  background: #161320;
+  color: #ddb6f2;
+}
+
+#cpu,
+#custom-cpuinfo {
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  background: #161320;
+  color: #96cdfb;
+}
+
+#custom-launcher {
+  font-size: 16px;
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 7px;
+  padding-right: 12px;
+  border-radius: 10px;
+  transition: none;
+  background: #161320;
+  color: #89dceb;
+}
+
+#custom-launcher:hover {
+  background: #89dceb;
+  color: #161320;
+}
+
+#clock {
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  background: #161320;
+  color: #abe9b3;
+}
+
 #network {
   margin-top: 6px;
   margin-left: 8px;
   padding-left: 10px;
-  padding-right: 18px;
+  padding-right: 10px;
   margin-bottom: 0px;
   border-radius: 10px;
   transition: none;
   background: #161320;
   color: #f8bd96;
+}
+
+/* ================================================ */
+/* ================= RIGHT MODULES ================ */
+/* ================================================ */
+#custom-media {
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  background: #161320;
+  color: #f2cdcd;
 }
 
 #pulseaudio {
@@ -124,85 +199,6 @@ window#waybar.hidden {
   }
 }
 
-#backlight,
-#custom-image {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 12px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #bd93f9;
-}
-
-#clock {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #abe9b3;
-}
-
-#memory {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  margin-bottom: 0px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #ddb6f2;
-}
-
-#cpu,
-#custom-cpuinfo {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  margin-bottom: 0px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #96cdfb;
-}
-
-#tray {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  margin-bottom: 0px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: #b5e8e0;
-  background: #161320;
-}
-
-#custom-launcher {
-  font-size: 16px;
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 7px;
-  padding-right: 12px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #89dceb;
-}
-
-#custom-launcher:hover {
-  background: #89dceb;
-  color: #161320;
-}
-
 #custom-power {
   font-size: 16px;
   margin-top: 6px;
@@ -217,22 +213,12 @@ window#waybar.hidden {
   color: #f28fad;
 }
 
-#custom-media {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  background: #161320;
-  color: #f2cdcd;
-}
-
+/* ================================================ */
+/* ==================== EXTRAS ==================== */
+/* ================================================ */
 #idle_inhibitor {
   background-color: #2d3436;
 }
-
 #idle_inhibitor.activated {
   background-color: #ecf0f1;
   color: #2d3436;
