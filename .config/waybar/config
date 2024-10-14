@@ -6,8 +6,16 @@
     "output": "!DP-1",
 
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["custom/cpuinfo", "cpu", "memory", "custom/launcher", "clock#time", "clock#date", "network"],
-    "modules-right": ["pulseaudio", "battery", "custom/power"],
+    "modules-center": [
+      "custom/cpuinfo",
+      "cpu",
+      "memory",
+      "custom/launcher",
+      "clock#time",
+      "clock#date",
+      "network"
+    ],
+    "modules-right": ["backlight", "pulseaudio", "battery", "custom/power"],
 
     "hyprland/workspaces": {
       "format": "{icon}",
@@ -23,7 +31,7 @@
         "3": [],
         "4": [],
         "5": []
-      },
+      }
     },
 
     "custom/cpuinfo": {
@@ -50,15 +58,16 @@
     "custom/launcher": {
       "format": "",
       "on-click": "rofi -show drun",
+      "tooltip": false
     },
     "clock#time": {
-        "format": "󱑂 {:%I:%M}",
-        "tooltip": false,
-        "min-length": 7,
-        "max-length": 7
+      "format": "󱑂 {:%I:%M}",
+      "tooltip": false,
+      "min-length": 7,
+      "max-length": 7
     },
     "clock#date": {
-      "format": "󱨴 {:%m-%d}",
+      "format": "󱨴 {:%d-%m}",
       "tooltip-format": "<tt>{calendar}</tt>",
       "calendar": {
         "mode": "month",
@@ -70,7 +79,7 @@
           "today": "<span color='#f38ba8'><b>{}</b></span>"
         }
       },
-      "actions": {"on-click-right": "mode"},
+      "actions": { "on-click-right": "mode" },
       "min-length": 7,
       "max-length": 7
     },
@@ -86,13 +95,18 @@
       "max-length": 8
     },
 
-    "custom/media": {
-      "exec": "/usr/bin/python3 ~/.config/waybar/scripts/mediaplayer.py",
-      "format": "{}",
-      "return-type": "json",
-      "on-click": "playerctl play-pause",
-      "min-length": 5,
-      "max-length": 35,
+    "tray": {
+      "icon-size": 21,
+      "spacing": 10
+    },
+    "backlight": {
+      "format": "{icon} {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""],
+      "tooltip": false,
+      "on-scroll-up": "~/.config/waybar/scripts/brightnesscontrol.sh -o i",
+      "on-scroll-down": "~/.config/waybar/scripts/brightnesscontrol.sh -o d",
+      "min-length": 7,
+      "max-length": 7
     },
     "pulseaudio": {
       "tooltip": false,
@@ -106,7 +120,9 @@
       "format-icons": {
         "headphone": "󰋋",
         "default": ["", "", ""]
-      }
+      },
+      "min-length": 7,
+      "max-length": 7
     },
     "battery": {
       "states": {
@@ -122,14 +138,16 @@
       "bat": "BAT0",
       "adapter": "ADP0",
       "interval": 60,
+      "min-length": 7,
+      "max-length": 7
     },
     "custom/power": {
       "format": "",
       "tooltip": false,
       "on-click": "~/.config/waybar/scripts/logoutlaunch.sh 1",
       "on-click-right": "~/.config/waybar/scripts/logoutlaunch.sh 2",
-      "interval" : 86400
-    },
+      "interval": 86400
+    }
   },
   {
     "layer": "top",
@@ -138,7 +156,15 @@
     "output": "DP-1",
 
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["custom/cpuinfo", "cpu", "memory", "custom/launcher", "clock#time", "clock#date", "network"],
+    "modules-center": [
+      "custom/cpuinfo",
+      "cpu",
+      "memory",
+      "custom/launcher",
+      "clock#time",
+      "clock#date",
+      "network"
+    ],
     "modules-right": ["custom/media", "pulseaudio", "battery", "custom/power"],
 
     "hyprland/workspaces": {
@@ -155,7 +181,7 @@
         "3": [],
         "4": [],
         "5": []
-      },
+      }
     },
 
     "custom/cpuinfo": {
@@ -181,16 +207,16 @@
     },
     "custom/launcher": {
       "format": "",
-      "on-click": "rofi -show drun",
+      "on-click": "rofi -show drun"
     },
     "clock#time": {
-        "format": "󱑂 {:%I:%M}",
-        "tooltip": false,
-        "min-length": 7,
-        "max-length": 7
+      "format": "󱑂 {:%I:%M}",
+      "tooltip": false,
+      "min-length": 7,
+      "max-length": 7
     },
     "clock#date": {
-      "format": "󱨴 {:%m-%d}",
+      "format": "󱨴 {:%d-%m}",
       "tooltip-format": "<tt>{calendar}</tt>",
       "calendar": {
         "mode": "month",
@@ -202,7 +228,7 @@
           "today": "<span color='#f38ba8'><b>{}</b></span>"
         }
       },
-      "actions": {"on-click-right": "mode"},
+      "actions": { "on-click-right": "mode" },
       "min-length": 7,
       "max-length": 7
     },
@@ -218,13 +244,31 @@
       "max-length": 8
     },
 
+    "backlight": {
+      "format": "{icon} {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""],
+      "tooltip": false,
+      "on-scroll-up": "~/.config/waybar/scripts/brightnesscontrol.sh -o i",
+      "on-scroll-down": "~/.config/waybar/scripts/brightnesscontrol.sh -o d",
+      "min-length": 7,
+      "max-length": 7
+    },
     "custom/media": {
       "exec": "/usr/bin/python3 ~/.config/waybar/scripts/mediaplayer.py",
       "format": "{}",
       "return-type": "json",
       "on-click": "playerctl play-pause",
       "min-length": 5,
-      "max-length": 35,
+      "max-length": 35
+    },
+    "backlight": {
+      "format": "{icon} {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""],
+      "tooltip": false,
+      "on-scroll-up": "~/.config/waybar/scripts/brightnesscontrol.sh -o i",
+      "on-scroll-down": "~/.config/waybar/scripts/brightnesscontrol.sh -o d",
+      "min-length": 7,
+      "max-length": 7
     },
     "pulseaudio": {
       "tooltip": false,
@@ -238,7 +282,9 @@
       "format-icons": {
         "headphone": "󰋋",
         "default": ["", "", ""]
-      }
+      },
+      "min-length": 7,
+      "max-length": 7
     },
     "battery": {
       "states": {
@@ -254,14 +300,15 @@
       "bat": "BAT0",
       "adapter": "ADP0",
       "interval": 60,
+      "min-length": 7,
+      "max-length": 7
     },
     "custom/power": {
       "format": "",
       "tooltip": false,
       "on-click": "~/.config/waybar/scripts/logoutlaunch.sh 1",
       "on-click-right": "~/.config/waybar/scripts/logoutlaunch.sh 2",
-      "interval" : 86400
-    },
+      "interval": 86400
+    }
   }
 ]
-

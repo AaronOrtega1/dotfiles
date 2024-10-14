@@ -23,3 +23,6 @@ hvr - hover
 @define-color wb-act-fg         #11111b;
 @define-color wb-hvr-bg         #6c7086;
 @define-color wb-hvr-fg         #11111b;
+
+@define-color bg-border         #161320;
+@define-color fg-bg             #7984a4;
