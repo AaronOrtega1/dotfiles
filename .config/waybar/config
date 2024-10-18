@@ -5,7 +5,7 @@
     "margin-bottom": 2,
     "output": "!DP-1",
 
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["hyprland/workspaces", "custom/wallpaper"],
     "modules-center": [
       "custom/cpuinfo",
       "cpu",
@@ -32,6 +32,14 @@
         "4": [],
         "5": []
       }
+    },
+    "custom/wallpaper": {
+      "format": "",
+      "tooltip": false,
+      "on-click": "~/.config/hypr/scripts/select-wallpaper.sh",
+      "interval": 600,
+      "min-length": 2,
+      "max-length": 2
     },
 
     "custom/cpuinfo": {
@@ -155,7 +163,7 @@
     "margin-bottom": 2,
     "output": "DP-1",
 
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["hyprland/workspaces", "custom/wallpaper"],
     "modules-center": [
       "custom/cpuinfo",
       "cpu",
@@ -182,6 +190,14 @@
         "4": [],
         "5": []
       }
+    },
+    "custom/wallpaper": {
+      "format": "",
+      "tooltip": false,
+      "on-click": "~/.config/hypr/scripts/select-wallpaper.sh",
+      "interval": 600,
+      "min-length": 2,
+      "max-length": 2
     },
 
     "custom/cpuinfo": {
