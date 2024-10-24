@@ -1,19 +1,4 @@
 return {
-  -- TOKYONIGHT CONFIG
-  -- {
-  --   "folke/tokyonight.nvim",
-  --   lazy = false,
-  --   priority = 1000,
-  --   opts = {
-  --     style = "night",
-  --     transparent = true,
-  --     styles = {
-  --       sidebars = "transparent",
-  --       floats = "transparent",
-  --     },
-  --   },
-  -- },
-
   -- CATPPUCCIN CONFIG
   {
     "catppuccin/nvim",
@@ -35,6 +20,21 @@ return {
   --     vim.cmd.colorscheme("sonokai")
   --   end,
   -- },
+  -- TOKYONIGHT CONFIG
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {
+  --     style = "night",
+  --     transparent = true,
+  --     styles = {
+  --       sidebars = "transparent",
+  --       floats = "transparent",
+  --     },
+  --   },
+  -- },
+
   {
     "LazyVim/LazyVim",
     opts = {

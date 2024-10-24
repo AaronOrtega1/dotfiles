@@ -260,15 +260,6 @@
       "max-length": 8
     },
 
-    "backlight": {
-      "format": "{icon} {percent}%",
-      "format-icons": ["", "", "", "", "", "", "", "", ""],
-      "tooltip": false,
-      "on-scroll-up": "~/.config/waybar/scripts/brightnesscontrol.sh -o i",
-      "on-scroll-down": "~/.config/waybar/scripts/brightnesscontrol.sh -o d",
-      "min-length": 7,
-      "max-length": 7
-    },
     "custom/media": {
       "exec": "/usr/bin/python3 ~/.config/waybar/scripts/mediaplayer.py",
       "format": "{}",

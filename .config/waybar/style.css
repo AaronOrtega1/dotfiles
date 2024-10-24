@@ -129,7 +129,8 @@ window#waybar.hidden {
 #custom-media,
 #pulseaudio,
 #battery,
-#backlight {
+#backlight,
+#custom-pomodoro {
   margin-top: 6px;
   margin-left: 8px;
   padding-left: 10px;
